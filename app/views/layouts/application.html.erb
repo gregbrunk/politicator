@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Politicator</title>
-    <%= csrf_meta_tags %>
+<head>
+<title>Politicator</title>
+	<%= csrf_meta_tags %>
+	<!-- Set Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!-- Bootstrap CSS CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css">
+	<!-- Local Styles -->
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<!-- Local Scripts -->
+	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-fixed-top">
+	<!--Burger navbar -->
+	<button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"></button>
+	<a class="navbar-brand" href="#">Politicator</a>
+	<div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar">
+		<ul class="nav navbar-nav pull-xs-left">
+			<li class="nav-item"><a href="#" role="button">Candidates</a></li>
+		</ul>
+		<ul class="nav navbar-nav pull-xs-right">
+			<li class="nav-item"><img class="img-rounded" src='/images/greg.jpg' id="nav-photo"></li>
+			<li class="nav-item"><a href="#" role="button">Greg</a></li>
+			<li class="nav-item"><a href="#" role="button">Logout</a></li>
+		</ul>
+	</div>
+</nav>
 
-  <body>
-    <%= yield %>
-  </body>
+<%= yield %>
+
+<!-- Footer Section -->
+<section class="footer">
+	<p class="footer-headline col-md-6 offset-md-3">More Resources</p>
+	<ul class="footer-link-list col-md-6 offset-md-3">
+		<li class="candidate-links"><a style="color: white" href="https://www.hillaryclinton.com/">Clinton's Site</a></li> &nbsp&nbsp / &nbsp&nbsp
+		<li class="candidate-links"><a style="color: white" href="https://www.donaldjtrump.com/">Trump's Site</a></li> &nbsp&nbsp / &nbsp&nbsp
+		<li class="candidate-links"><a style="color: white" href="http://2016election.procon.org/view.source-summary-chart.php">Candidates Compared</a></li>
+	</ul>
+</section>
+
+<!-- Scripts -->
+	<!-- jQuery CDN -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<!-- Bootstrap JS CDN--> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js"></script>
+	<!-- Tether JS CDN--> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+</body>
 </html>
