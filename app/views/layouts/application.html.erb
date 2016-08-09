@@ -14,22 +14,102 @@
 </head>
 
 <body>
-<!-- Navigation Bar -->
-<nav class="navbar navbar-fixed-top">
-	<!--Burger navbar -->
-	<button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"></button>
-	<a class="navbar-brand" href="#">Politicator</a>
-	<div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar">
-		<ul class="nav navbar-nav pull-xs-left">
-			<li class="nav-item"><a href="#" role="button">Candidates</a></li>
-		</ul>
-		<ul class="nav navbar-nav pull-xs-right">
-			<li class="nav-item"><img class="img-rounded" src='/images/greg.jpg' id="nav-photo"></li>
-			<li class="nav-item"><a href="#" role="button">Greg</a></li>
-			<li class="nav-item"><a href="#" role="button">Logout</a></li>
-		</ul>
+<header>
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-fixed-top">
+		<!--Burger navbar -->
+		<button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"></button>
+		<a class="navbar-brand" href="/">Politicator</a>
+		<div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar">
+			<ul class="nav navbar-nav pull-xs-left">
+				<li class="nav-item"><a href="/" role="button">Home</a></li>
+				<li class="nav-item"><a href="#" role="button">Candidates</a></li>
+			</ul>
+			<ul class="nav navbar-nav pull-xs-right">
+				<% if current_user == nil %>
+	                <li class="nav-item"><a href="#loginModal" role="button" data-toggle="modal">Login</a></li>
+	                <li class="nav-item"><a href="#registerModal" role="button" data-toggle="modal">Sign Up!</a></li>
+				<% else %>
+					<li class="nav-item"><img class="img-rounded" src='<%=current_user.profile_pic%>' id="nav-photo"></li>
+					<li class="nav-item"><a href="/users/<%=current_user.id%>"><%=current_user.first_name%></a></li>
+					<li class="nav-item"><%= link_to 'Logout', logout_path, method: :delete %></li>
+				<% end %>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Register Modal -->
+	<div id="registerModal" class="modal fade" role="dialog">
+	   <div class="modal-dialog">
+	       <!-- Modal content-->
+	       <div class="modal-content">
+	           <div class="modal-header">
+	               <button type="button" class="close" data-dismiss="modal">&times;</button>
+	               <h4 class="modal-title">Register</h4>
+	           </div>
+	           <div class="modal-body">
+	               <%= form_for User.new do |f| %>
+	               <div class="form-group">
+	                 <label for="first_name">First Name:</label>
+	                 <%= f.text_field :first_name, placeholder: "First Name", :class => 'form-control' %>
+	               </div>
+	               <div class="form-group">
+	                 <label for="last_name">Last Name:</label>
+	                 <%= f.text_field :last_name, placeholder: "Last Name", :class => 'form-control' %>
+	               </div>
+	               <div class="form-group">
+	                 <label for="party">Political Party:</label>
+	                 <%= f.text_field :party, placeholder: "Political Party", :class => 'form-control' %>
+	               </div>
+	               <div class="form-group">
+	                 <label for="location">Location:</label>
+	                 <%= f.text_field :location, placeholder: "eg. Cincinnat, OH", :class => 'form-control' %>
+	               </div>
+	               <div class="form-group">
+	                 <label for="profile_pic">Profile Photo:</label>
+	                 <%= f.text_field :profile_pic, placeholder: "Link to Profile Photo", :class => 'form-control' %>
+	               </div>
+	               <div class="form-group">
+	                 <label for="email">Email:</label>
+	                 <%= f.text_field :email, placeholder: "Email", :class => 'form-control' %>
+	               </div>
+	               <div class="form-group">
+	                 <label for="password_digest">Password:</label>
+	                 <%= f.password_field :password, placeholder: "Password", :class => 'form-control' %>
+	               </div>
+	                <%= f.submit "Submit", :class => 'btn btn-default' %>
+	             <% end %>
+	           </div>
+	       </div>
+	   </div>
 	</div>
-</nav>
+
+	<!-- Login Modal -->
+	<div id="loginModal" class="modal fade" role="dialog">
+	   <div class="modal-dialog">
+	       <!-- Modal content-->
+	       <div class="modal-content">
+	           <div class="modal-header">
+	               <button type="button" class="close" data-dismiss="modal">&times;</button>
+	               <h4 class="modal-title">Login</h4>
+	           </div>
+	           <div class="modal-body">
+	             <%= form_for User.new, url: "/sessions", method: "post" do |f| %>
+	               <div class="form-group">
+	                 <label for="email">Email:</label>
+	                 <%= f.text_field :email, placeholder: "Email", :class => "form-control" %>
+	               </div>
+	               <div class="form-group">
+	                 <label for="password_digest">Password:</label>
+	                 <%= f.password_field :password, placeholder: "Password", :class => "form-control" %>
+	               </div>
+	               <%= f.submit "Sign In", :class => "btn btn-default" %>
+	               <% end %>
+	           </div>
+	       </div>
+	   </div>
+	</div>
+</header>
 
 <%= yield %>
 
