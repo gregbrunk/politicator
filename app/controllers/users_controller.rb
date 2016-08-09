@@ -45,15 +45,15 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
     redirect_to users_path
-    end
+  end
 
-    def new_survey
+  def new_survey
        @user = current_user
-    end
+  end
 
-    def create_survey
+  def create_survey
 
-    end
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
