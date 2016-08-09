@@ -47,6 +47,13 @@ class UsersController < ApplicationController
     redirect_to users_path
     end
 
+    def new_survey
+       @user = current_user
+    end
+
+    def create_survey
+
+    end
 
   private
     # Use callbacks to share common setup or constraints between actions.

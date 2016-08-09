@@ -2,7 +2,7 @@ class ChoicesController < ApplicationController
   before_action :set_choice, only: [:show, :edit, :update, :destroy]
 
  def index
-    @choices = choice.all
+    @choices = Choice.all
   end
 
   # GET /policies/1
@@ -47,12 +47,12 @@ class ChoicesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_choice
+     def set_choice
       @choice = Choice.find(params[:id])
-    end
+      end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def choice_params
-      params.require(:choice).permit(:name, :left, :right)
+      params.require(:choice).permit(:choice, :user_id, :policy_id)
     end
 end
