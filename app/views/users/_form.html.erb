@@ -1,52 +1,33 @@
-<%= form_for(user) do |f| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+<%= form_for @user do |f| %>
   <div class="field">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, placeholder: "First Name" %>
   </div>
 
   <div class="field">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, placeholder: "Last Name" %>
   </div>
 
   <div class="field">
-    <%= f.label :location %>
-    <%= f.text_field :location %>
+    <%= f.text_field :location, placeholder: "location" %>
   </div>
 
   <div class="field">
-    <%= f.label :party %>
-    <%= f.text_field :party %>
+    <%= f.text_field :party, placeholder: "party" %>
   </div>
 
   <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, placeholder: "email" %>
   </div>
 
   <div class="field">
-    <%= f.label :profile_pic %>
-    <%= f.text_field :profile_pic %>
+    <%= f.text_field :profile_pic, placeholder: "profile picture url" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_digest %>
-    <%= f.text_field :password_digest %>
+    <%= f.password_field :password, placeholder: "password" %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Sign Up" %>
   </div>
 <% end %>

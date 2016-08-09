@@ -26,7 +26,6 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    user_params = params.require(:user).permit(:first_name, :last_name, :location, :party, :email, :profile_pic, :password_digest)
     @user = User.create(user_params)
     login(@user) # <-- login the user
     redirect_to "/users/#{@user.id}" # <-- go to show
@@ -57,6 +56,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :location, :party, :email, :profile_pic, :password_digest)
+      params.require(:user).permit(:first_name, :last_name, :location, :party, :email, :profile_pic, :password)
     end
 end
