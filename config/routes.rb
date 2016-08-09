@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :choices
   # Home Page Route
   root to: "welcome#index"
 
@@ -13,5 +14,9 @@ Rails.application.routes.draw do
   post "/sessions", to: "sessions#create"
 
   delete "/sessions", to: "sessions#destroy", as: "logout"
+
+  get "/users/:id/survey", to: "users#new_survey", as: "new_survey"
+
+  post "/users/:id/survey", to: "users#create_survey", as: "create_survey"
   
 end
