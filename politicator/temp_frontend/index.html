@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Politicator</title>
+	<!-- Set Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!-- Bootstrap CSS CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css">
+	<!-- Local Styles -->
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-fixed-top">
+	<!--Burger navbar -->
+	<button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"></button>
+	<a class="navbar-brand" href="#">Politicator</a>
+	<div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar">
+		<ul class="nav navbar-nav pull-xs-left">
+			<li class="nav-item"><a href="#" role="button">Candidates</a></li>
+		</ul>
+		<ul class="nav navbar-nav pull-xs-right">
+			<li class="nav-item"><img class="img-rounded" src="images/greg.jpg" id="nav-photo"></li>
+			<li class="nav-item"><a href="#" role="button">Greg</a></li>
+			<li class="nav-item"><a href="#" role="button">Logout</a></li>
+		</ul>
+	</div>
+</nav>
+<!-- Hero Content  -->
+<section class="hero">
+	<div class= "col-md-12" id="hero-headline-block">
+		<p id="hero-headline">choose.</p>
+	</div>
+</section>
+
+<!-- Call to Action Content -->
+<section class="cta">
+	<p class="cta-header">You think you know where you stand. But are you sure?</p>
+	<button id="cta-button" type="button" class="btn btn-outline-danger">Find Out</button>
+</section>
+
+<!-- Candidate Content -->
+<section class="candidates-section">
+	<!-- Hillary Section -->
+	<div class="col-md-4 offset-md-1 col-xs-10 offset-xs-1 candidate-box">
+		<!-- Candidate Details -->
+		<div class="col-md-12 candidate-head">
+			<div class="candidate-img" style="background-image: url('images/Hillary.jpg')"></div>
+			<p class="candidate-name">Hillary Rodham Clinton</p>
+			<p>Party: <span class="candidate-party-left">Democrat</span></p>
+			<hr>
+		</div>
+		<!-- Candidate Policies -->
+		<div class="col-md-12 candidate-policies-box">
+			<p class="policy-name">Foreign Policy</p>
+			<div class="col-md-5 offset-md-1 policy-value-left">
+				<p>Ensure safety for all the world.</p>
+			</div>
+			<div class="col-md-5 policy-value-right">
+				<p>American safety is all that matters.</p>
+			</div>
+			<div class="col-md-10 offset-md-1 policy-slider">
+				<img class="policy-slider-img" src="images/left-slider.png">
+			</div>
+		</div>
+		<div class="col-md-10 offset-md-1 candidate-quote">
+			<p class="quote-text">''We and our allies must work hand in hand to dismantle the networks that threaten the safety of the world''</p>
+		</div>
+		<div class="col-md-12 candidate-button-box">
+			<hr>
+			<a href="candidates.html" id="cta-button" type="button" class="btn btn-outline-danger" type="submit">See More</a>
+		</div>
+	</div>
+	<!-- Trump Section -->
+	<div class="col-md-4 offset-md-2 col-xs-10 offset-xs-1 candidate-box">
+		<div class="col-md-12 candidate-head">
+			<div class="candidate-img" style="background-image: url('images/Trump.jpg')"></div>
+			<p class="candidate-name">Donald John Trump, Sr.</p>
+			<p>Party: <span class="candidate-party-right">Republican</span></p>
+			<hr>
+		</div>
+		<!-- Candidate Policies -->
+		<div class="col-md-12 candidate-policies-box">
+			<p class="policy-name">Foreign Policy</p>
+			<div class="col-md-5 offset-md-1 policy-value-left">
+				<p>Ensure safety for all the world.</p>
+			</div>
+			<div class="col-md-5 policy-value-right">
+				<p>American safety is all that matters.</p>
+			</div>
+			<div class="col-md-10 offset-md-1 policy-slider">
+				<img class="policy-slider-img" src="images/right-slider.png">
+			</div>
+			<div class="col-md-10 offset-md-1 candidate-quote">
+				<p class="quote-text">''We will never enter into any conflict unless it makes us safer as a nation''</p>
+			</div>
+		</div>
+		<div class="col-md-12 candidate-button-box">
+			<hr>
+			<a href="candidates.html" id="cta-button" type="button" class="btn btn-outline-danger" type="submit">See More</a>
+		</div>
+	</div>
+</section>
+
+<!-- Footer Section -->
+<section class="footer">
+	<p class="footer-headline col-md-6 offset-md-3">More Resources</p>
+	<ul class="footer-link-list col-md-6 offset-md-3">
+		<li class="candidate-links"><a style="color: white" href="https://www.hillaryclinton.com/">Clinton's Site</a></li> &nbsp&nbsp / &nbsp&nbsp
+		<li class="candidate-links"><a style="color: white" href="https://www.donaldjtrump.com/">Trump's Site</a></li> &nbsp&nbsp / &nbsp&nbsp
+		<li class="candidate-links"><a style="color: white" href="http://2016election.procon.org/view.source-summary-chart.php">Candidates Compared</a></li>
+	</ul>
+</section>
+
+
+<!-- Scripts -->
+	<!-- jQuery CDN -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<!-- Bootstrap JS CDN--> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js"></script>
+	<!-- Tether JS CDN--> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+	<!-- Local Scripts -->
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
