@@ -15,26 +15,39 @@
       <p>Party: <span class="candidate-party-left">Democrat</span></p>
       <hr>
     </div>
-    <!-- Candidate Policy 1 -->
-    <div class="col-md-12 candidate-policies-box">
-      <p class="policy-name">Foreign Policy</p>
-      <div class="col-md-5 offset-md-1 policy-value-left">
-        <p>Ensure safety for all the world.</p>
+    <!-- Candidate Policies -->
+    <% @policies.each do |policy| %>
+      <div class="col-md-12 candidate-policies-box">
+        <p class="policy-name"><%= policy.name %></p>
+        <div class="col-md-5 offset-md-1 policy-value-left">
+          <p><%= policy.left %></p>
+        </div>
+        <div class="col-md-5 policy-value-right">
+          <p><%= policy.right %></p>
+        </div>
+        <% if policy.hillary_choice == "Left" %>
+          <div class="col-md-10 offset-md-1 policy-slider">
+            <img class="policy-slider-img" src="images/left-slider.png">
+          </div>
+        <% elsif policy.hillary_choice == "Middle" %>  
+          <div class="col-md-10 offset-md-1 policy-slider">
+            <img class="policy-slider-img" src="images/middle-slider.png">
+          </div>
+        <% else %> 
+          <div class="col-md-10 offset-md-1 policy-slider">
+            <img class="policy-slider-img" src="images/right-slider.png">
+          </div>  
+        <% end %>  
+        <div class="col-md-10 offset-md-1 candidate-quote">
+          <p class="quote-text"><%= policy.hillary_quote %></p>
+        </div>  
       </div>
-      <div class="col-md-5 policy-value-right">
-        <p>American safety is all that matters.</p>
+      <div class="col-md-12">
+        <hr>
       </div>
-      <div class="col-md-10 offset-md-1 policy-slider">
-        <img class="policy-slider-img" src="images/left-slider.png">
-      </div>
-    </div>
-    <div class="col-md-10 offset-md-1 candidate-quote">
-      <p class="quote-text">''We and our allies must work hand in hand to dismantle the networks that threaten the safety of the world''</p>
-    </div>
-    <div class="col-md-12">
-      <hr>
-    </div>
+    <% end %>
   </div>
+
   <!-- Trump Section -->
   <div class="col-md-4 offset-md-2 col-xs-10 offset-xs-1 candidate-box-candidate-page">
     <div class="col-md-12 candidate-head">
@@ -43,25 +56,37 @@
       <p>Party: <span class="candidate-party-right">Republican</span></p>
       <hr>
     </div>
-    <!-- Candidate Policy 1 -->
-    <div class="col-md-12 candidate-policies-box">
-      <p class="policy-name">Foreign Policy</p>
-      <div class="col-md-5 offset-md-1 policy-value-left">
-        <p>Ensure safety for all the world.</p>
+    <!-- Candidate Policies -->
+    <% @policies.each do |policy| %>
+      <div class="col-md-12 candidate-policies-box">
+        <p class="policy-name"><%= policy.name %></p>
+        <div class="col-md-5 offset-md-1 policy-value-left">
+          <p><%= policy.left %></p>
+        </div>
+        <div class="col-md-5 policy-value-right">
+          <p><%= policy.right %></p>
+        </div>
+        <% if policy.trump_choice == "Left" %>
+          <div class="col-md-10 offset-md-1 policy-slider">
+            <img class="policy-slider-img" src="images/left-slider.png">
+          </div>
+        <% elsif policy.trump_choice == "Middle" %>  
+          <div class="col-md-10 offset-md-1 policy-slider">
+            <img class="policy-slider-img" src="images/middle-slider.png">
+          </div>
+        <% else %> 
+          <div class="col-md-10 offset-md-1 policy-slider">
+            <img class="policy-slider-img" src="images/right-slider.png">
+          </div>  
+        <% end %>  
+        <div class="col-md-10 offset-md-1 candidate-quote">
+          <p class="quote-text"><%= policy.trump_quote %></p>
+        </div>  
       </div>
-      <div class="col-md-5 policy-value-right">
-        <p>American safety is all that matters.</p>
+      <div class="col-md-12">
+        <hr>
       </div>
-      <div class="col-md-10 offset-md-1 policy-slider">
-        <img class="policy-slider-img" src="images/right-slider.png">
-      </div>
-      <div class="col-md-10 offset-md-1 candidate-quote">
-        <p class="quote-text">''We will never enter into any conflict unless it makes us safer as a nation''</p>
-      </div>
-    </div>
-    <div class="col-md-12">
-      <hr>
-    </div>
+    <% end %>
   </div>
 </section>
 
