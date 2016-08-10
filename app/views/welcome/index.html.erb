@@ -8,7 +8,7 @@
 <!-- Call to Action Content -->
 <section class="cta">
 	<p class="cta-header">You think you know where you stand. But are you sure?</p>
-	<button id="cta-button" type="button" class="btn btn-outline-danger">Find Out</button>
+	<%= button_to 'Find Out', new_survey_path, method: :get, class: 'btn btn-outline-danger', :id => 'cta-button' %>
 </section>
 
 <!-- Candidate Content -->

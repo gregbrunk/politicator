@@ -1,0 +1,11 @@
+<%= form_tag do |f| %>
+  <% @policies.each do |policy| %>
+    <h3><%= policy.name %></h3>
+    <p><%= policy.left %></p>
+    <p><%= policy.right %></p>
+    <input name="policy_<%=policy.id%>" type="radio" value="Left"> Left
+    <input name="policy_<%=policy.id%>" type="radio" value="Middle"> Middle
+    <input name="policy_<%=policy.id%>" type="radio" value="Right"> Right
+  <% end %>
+  <input type="submit" value="Submit">
+<% end %>
