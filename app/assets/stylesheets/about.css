@@ -1,0 +1,83 @@
+.about-background {
+	background-color: #4A90E2;
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.about-header-title {
+	margin-top: 2em;
+	font-family:'Avenir Next LT Pro Regular';
+	margin-top: 175px;
+	color: white;
+}
+
+.about-header-text {
+	font-family: 'Avenir Next LT Pro Ultra Light';
+	color: white;
+	font-size: 20px;
+}
+
+.about-button {
+	background-color: white;
+}
+
+.carrot-bottom {
+position: absolute;
+bottom: 0;
+}
+
+#carrot {
+	text-align: center;
+	width: 100vw;
+}
+
+.meet-developers-text {
+	font-family: 'Avenir Next LT Pro Ultra Light';
+	color: white;
+	font-size: 25px;
+}
+
+.about-div {
+	text-align: center;
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+
+.about-box {
+	background-image: url("/images/about_box.png");
+	height: 30vh;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	padding: 70px;
+}
+
+.our-team-title {
+	color: #C05858;
+}
+
+.headshot {
+	height: 200px;
+	width: 200px;
+	background-size: cover;
+	background-position: 50% 50%;
+	border-radius: 50%;
+	margin-bottom: 20px;
+	-webkit-filter: grayscale(100%);
+}
+
+.headshot-section {
+	text-align: center;
+	font-family:'Avenir Next LT Pro Regular';
+	font-size: 20px;
+	color: #373a3c;
+}
+
+.personal-icons {
+	display: inline-block;
+	font-size: 40px;
+	color: #a8a8a8;
+	font-family: 'Avenir Next LT Pro Ultra Light';
+	margin-top: -20px;
+}
+
