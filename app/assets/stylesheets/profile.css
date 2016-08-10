@@ -2,7 +2,7 @@
 .profile-hero {
 	z-index: -10;
 	position: relative;
-	height: 65vh;
+	height: 650px;
 	overflow: hidden;
 }
 
@@ -83,11 +83,22 @@
 
 .profile-details {
 	font-family: 'Avenir Next LT Pro Ultra Light';
-	margin-top: 80px;
+	margin-top: 75px;
 	font-size: 35px;
-
 }
 
 .profile-content {
 	background-color: white;
+	height: 50vh;
+}
+
+.candidate-percent-box {
+	text-align: center;
+}
+
+.candidate-percent {
+	display: block;
+	width: 100%;
+	height: 250px;
+	margin-top: 50%;
 }

@@ -4,22 +4,38 @@
   </div>
 </section>
 
-  <div class="profile-header">
-    <div class="profile-edit-button-box">
-      <%= button_to 'Edit', edit_user_path(@user), method: :get, class: 'btn btn-outline-secondary', :id => 'profile-edit-button' %>
-    </div>
-    <div class="profile-img" style="background-image: url('<%= @user.profile_pic %>')"></div>
-        <div class="profile-name">
-            <p><%= @user.first_name %> <%= @user.last_name %></p>
-       </div>
-       <div class="profile-party">
-         <p>Party: <span class="profile-party-value"><%= @user.party %></span> </p>
-       </div>
-       <div class="profile-details">
-         <p><%= @user.location %> &nbsp&nbsp|&nbsp&nbsp <%= @user.email %></p>
-       </div>
+<div class="profile-header">
+  <div class="profile-edit-button-box">
+    <%= button_to 'Edit', edit_user_path(@user), method: :get, class: 'btn btn-outline-secondary', :id => 'profile-edit-button' %>
   </div>
+  <div class="profile-img" style="background-image: url('<%= @user.profile_pic %>')"></div>
+      <div class="profile-name">
+          <p><%= @user.first_name %> <%= @user.last_name %></p>
+     </div>
+     <div class="profile-party">
+       <p>Party: <span class="profile-party-value"><%= @user.party %></span> </p>
+     </div>
+     <div class="profile-details">
+       <p><%= @user.location %> &nbsp&nbsp|&nbsp&nbsp <%= @user.email %></p>
+     </div>
+</div>
 
 
 <section class="profile-content">
+  <div class="col-md-2 offset-md-3 candidate-percent-box">
+    <div class="candidate-percent">
+      <div class="profile-img" style="background-image: url('<%= @user.profile_pic %>')"></div>
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="candidate-percent">
+      <div class="profile-img" style="background-image: url('<%= @user.profile_pic %>')"></div>
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="candidate-percent">
+      <div class="profile-img" style="background-image: url('<%= @user.profile_pic %>')"></div>
+    </div>
+  </div>
 </section>
+ 
