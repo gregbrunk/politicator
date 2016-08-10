@@ -32,7 +32,7 @@
 	                <li class="nav-item"><a href="#registerModal" role="button" data-toggle="modal">Sign Up!</a></li>
 				<% else %>
 					<li class="nav-item"><img class="img-rounded" src='<%=current_user.profile_pic%>' id="nav-photo"></li>
-					<li class="nav-item"><a href="/users/<%=current_user.id%>"><%=current_user.first_name%></a></li>
+					<li class="nav-item"><a href="/profile" ><%=current_user.first_name%></a></li>
 					<li class="nav-item"><%= link_to 'Logout', logout_path, method: :delete %></li>
 				<% end %>
 			</ul>
