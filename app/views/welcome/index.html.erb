@@ -24,19 +24,19 @@
 		</div>
 		<!-- Candidate Policies -->
 		<div class="col-md-12 candidate-policies-box">
-			<p class="policy-name">Foreign Policy</p>
+			<p class="policy-name"><%= @policy.name %></p>
 			<div class="col-md-5 offset-md-1 policy-value-left">
-				<p>Ensure safety for all the world.</p>
+				<p><%= @policy.left %></p>
 			</div>
 			<div class="col-md-5 policy-value-right">
-				<p>American safety is all that matters.</p>
+				<p><%= @policy.right %></p>
 			</div>
 			<div class="col-md-10 offset-md-1 policy-slider">
 				<img class="policy-slider-img" src="/images/left-slider.png">
 			</div>
 		</div>
 		<div class="col-md-10 offset-md-1 candidate-quote">
-			<p class="quote-text">''We and our allies must work hand in hand to dismantle the networks that threaten the safety of the world''</p>
+			<p class="quote-text"><%= @policy.hillary_quote %></p>
 		</div>
 		<div class="col-md-12 candidate-button-box">
 			<hr>
@@ -53,18 +53,18 @@
 		</div>
 		<!-- Candidate Policies -->
 		<div class="col-md-12 candidate-policies-box">
-			<p class="policy-name">Foreign Policy</p>
+			<p class="policy-name"><%= @policy.name %></p>
 			<div class="col-md-5 offset-md-1 policy-value-left">
-				<p>Ensure safety for all the world.</p>
+				<p><%= @policy.left %></p>
 			</div>
 			<div class="col-md-5 policy-value-right">
-				<p>American safety is all that matters.</p>
+				<p><%= @policy.right %></p>
 			</div>
 			<div class="col-md-10 offset-md-1 policy-slider">
 				<img class="policy-slider-img" src="images/right-slider.png">
 			</div>
 			<div class="col-md-10 offset-md-1 candidate-quote">
-				<p class="quote-text">''We will never enter into any conflict unless it makes us safer as a nation''</p>
+				<p class="quote-text"><%= @policy.trump_quote %></p>
 			</div>
 		</div>
 		<div class="col-md-12 candidate-button-box">

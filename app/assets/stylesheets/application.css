@@ -86,7 +86,7 @@ html, body {
 
 #hero-headline {
 	text-align: center;
-	margin-top: 24vh;
+	margin-top: 28vh;
 	color: white;
     font-size: 140px;
 }
@@ -123,7 +123,7 @@ html, body {
     margin-bottom: 10vh;
     border-radius: 30px;
     background-color: white;
-    height: 750px;
+    height: 800px;
 }
 
 .candidate-head {

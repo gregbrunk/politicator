@@ -1,1 +1,8 @@
-This is the results page
+<% @policies.each do |policy| %>
+<div>
+<h1><%= policy.name %></h1>
+<p><%= policy.left %></p>
+<p><%= policy.right %></p>
+<p><%= @user.choices.find{|c| c.policy.id == policy.id}["choice"] %></p>	
+</div>
+<% end %>
