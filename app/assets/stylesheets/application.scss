@@ -279,7 +279,8 @@ html, body {
 font-family: 'Avenir Next LT Pro Demi';
 font-style: normal;
 font-weight: normal;
-src: local('Avenir Next LT Pro Demi'), url('AvenirNextLTPro-Demi.woff') format('woff');
+src: font-url('AvenirNextLTPro-Demi.woff');
+src: font-url('AvenirNextLTPro-Demi.woff#iefix') format('woff');
 }
 
 
@@ -287,36 +288,38 @@ src: local('Avenir Next LT Pro Demi'), url('AvenirNextLTPro-Demi.woff') format('
 font-family: 'Avenir Next LT Pro Regular';
 font-style: normal;
 font-weight: normal;
-src: local('Avenir Next LT Pro Regular'), url('AvenirNextLTPro-Regular.woff') format('woff');
+src: font-url('AvenirNextLTPro-Regular.woff');
+src: font-url('AvenirNextLTPro-Regular.woff#iefix') format('woff');
 }
 
 @font-face {
 font-family: 'Avenir Next LT Pro Bold';
 font-style: normal;
 font-weight: normal;
-src: local('Avenir Next LT Pro Bold'), url('AvenirNextLTPro-Bold.woff') format('woff');
+src: font-url('AvenirNextLTPro-Bold.woff');
+src: font-url('AvenirNextLTPro-Bold.woff#iefix') format('woff');
 }
-
 
 @font-face {
 font-family: 'Avenir Next LT Pro Demi Italic';
 font-style: normal;
 font-weight: normal;
-src: local('Avenir Next LT Pro Demi Italic'), url('AvenirNextLTPro-DemiIt.woff') format('woff');
+src: font-url('AvenirNextLTPro-DemiIt.woff');
+src: font-url('AvenirNextLTPro-DemiIt.woff#iefix') format('woff');
 }
-
 
 @font-face {
 font-family: 'Avenir Next LT Pro Italic';
 font-style: normal;
 font-weight: normal;
-src: local('Avenir Next LT Pro Italic'), url('AvenirNextLTPro-It.woff') format('woff');
+src: font-url('AvenirNextLTPro-It.woff');
+src: font-url('AvenirNextLTPro-It.woff#iefix') format('woff');
 }
-
 
 @font-face {
 font-family: 'Avenir Next LT Pro Ultra Light';
 font-style: normal;
 font-weight: normal;
-src: local('Avenir Next LT Pro Ultra Light'), url('AvenirNextLTPro-UltraLight.woff') format('woff');
+src: font-url('AvenirNextLTPro-UltraLight.woff');
+src: font-url('AvenirNextLTPro-UltraLight.woff#iefix') format('woff');
 }
