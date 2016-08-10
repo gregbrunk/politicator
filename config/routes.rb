@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   # User Routes
   resources :users
+  get "/profile", to: "users#show", as: "profile"
   get "/survey", to: "users#new_survey", as: "new_survey"
   post "/survey", to: "users#create_survey", as: "create_survey"
   get "/results", to: "users#results", as: "results"

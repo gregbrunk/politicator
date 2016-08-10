@@ -10,7 +10,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @user = User.find(params[:id])
+    @user = current_user
+    
   end
 
   # GET /users/new
@@ -36,7 +37,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update_attributes(user_params)
-    redirect_to user_path(@user)
+    redirect_to profile_path
   end
 
   # DELETE /users/1
