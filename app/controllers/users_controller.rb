@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in?, only: [:show, :edit, :update, :destroy, :new_survey]
+  before_action :logged_in?, only: [:show, :edit, :update, :destroy, :new_survey, :results]
 
   # GET /users
   # GET /users.json
