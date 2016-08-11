@@ -1,8 +1,136 @@
-<% @policies.each do |policy| %>
-<div>
-<h1><%= policy.name %></h1>
-<p><%= policy.left %></p>
-<p><%= policy.right %></p>
-<p><%= @user.choices.find{|c| c.policy.id == policy.id}["choice"] %></p>	
+<div class="row results-page-header">
+    <h1>How Do You Stack Up?</h1>
+  <div class="dashboard col-md-8 offset-md-2">
+  	<div class="col-md-6 dashboard-column-left">
+      	<div class="results-img-candidate-left" style="background-image: url('/images/HillaryOverlay.png')">
+        	<h2>75%</h2>
+      	</div>
+      	<p class="dashboard-subhead-left">Hillary Clinton</p>
+      	<p class="dashboard-subhead2-left">Policies Matched: 8/12</p>
+  	</div>
+	  	<div class="col-md-6">
+	      	<div class="results-img-candidate-right" style="background-image: url('/images/TrumpOverlay.png')">
+	        	<h2>35%</h2>
+	      	</div>
+	      	<p class="dashboard-subhead-right">Donald Trump</p>
+	      	<p class="dashboard-subhead2-right">Policies Matched: 3/12</p>
+	  	</div>
+  </div>
 </div>
-<% end %>
+
+<!-- Main Content -->
+<section class="results-background">
+	<div class="results-box col-md-10 offset-md-1">
+	  <!-- Hillary Section -->
+	  <div class="col-md-4 results-column">
+	    <!-- Candidate Details -->
+	    <div class="col-md-12 results-column-head">
+	      <div class="candidate-img" style="background-image: url('images/Hillary.jpg')"></div>
+	      <p class="candidate-name">Hillary Clinton</p>
+	      <p>Party: <span class="candidate-party-left">Democrat</span></p>
+	    </div>
+	    <!-- Candidate Policies -->
+	    <% @policies.each do |policy| %>
+	      <div class="col-md-12 candidate-policies-box">
+	        <p class="policy-name"><%= policy.name %></p>
+	        <div class="col-md-5 offset-md-1 policy-value-left">
+	          <p><%= policy.left %></p>
+	        </div>
+	        <div class="col-md-5 policy-value-right">
+	          <p><%= policy.right %></p>
+	        </div>
+	        <% if policy.hillary_choice == "Left" %>
+	          <div class="col-md-10 offset-md-1 policy-slider">
+	            <img class="policy-slider-img" src="images/left-slider.png">
+	          </div>
+	        <% elsif policy.hillary_choice == "Middle" %>  
+	          <div class="col-md-10 offset-md-1 policy-slider">
+	            <img class="policy-slider-img" src="images/middle-slider.png">
+	          </div>
+	        <% else %> 
+	          <div class="col-md-10 offset-md-1 policy-slider">
+	            <img class="policy-slider-img" src="images/right-slider.png">
+	          </div>  
+	        <% end %>  
+	      </div>
+	      <div class="col-md-12">
+	        <hr>
+	      </div>
+	    <% end %>
+	  </div>
+
+	  <!-- User Section -->
+	  <div class="col-md-4 results-column-user">
+	    <div class="col-md-12 results-column-head">
+	      <div class="candidate-img" style="background-image: url('<%=@user.profile_pic%>')"></div>
+	      <p class="candidate-name"><%=@user.first_name%> <%=@user.last_name%></p>
+	      <p>Party: <span class="candidate-party-right">Republican</span></p>
+	    </div>
+	    <!-- Candidate Policies -->
+	    <% @policies.each do |policy| %>
+	      <div class="col-md-12 candidate-policies-box">
+	        <p class="policy-name"><%= policy.name %></p>
+	        <div class="col-md-5 offset-md-1 policy-value-left">
+	          <p><%= policy.left %></p>
+	        </div>
+	        <div class="col-md-5 policy-value-right">
+	          <p><%= policy.right %></p>
+	        </div>
+	        <% if @user.choices.find{|c| c.policy.id == policy.id}["choice"] == "Left" %>
+	          <div class="col-md-10 offset-md-1 policy-slider">
+	            <img class="policy-slider-img" src="images/left-slider.png">
+	          </div>
+	        <% elsif @user.choices.find{|c| c.policy.id == policy.id}["choice"] == "Middle" %>  
+	          <div class="col-md-10 offset-md-1 policy-slider">
+	            <img class="policy-slider-img" src="images/middle-slider.png">
+	          </div>
+	        <% else %> 
+	          <div class="col-md-10 offset-md-1 policy-slider">
+	            <img class="policy-slider-img" src="images/right-slider.png">
+	          </div>  
+	        <% end %>   
+	      </div>
+	      <div class="col-md-12">
+	        <hr>
+	      </div>
+	    <% end %>
+	  </div>
+
+	  <!-- Trump Section -->
+	  <div class="col-md-4 results-column-right">
+	    <div class="col-md-12 results-column-head">
+	      <div class="candidate-img" style="background-image: url('images/Trump.jpg')"></div>
+	      <p class="candidate-name">Donald Trump</p>
+	      <p>Party: <span class="candidate-party-right">Republican</span></p>
+	    </div>
+	    <!-- Candidate Policies -->
+	    <% @policies.each do |policy| %>
+	      <div class="col-md-12 candidate-policies-box">
+	        <p class="policy-name"><%= policy.name %></p>
+	        <div class="col-md-5 offset-md-1 policy-value-left">
+	          <p><%= policy.left %></p>
+	        </div>
+	        <div class="col-md-5 policy-value-right">
+	          <p><%= policy.right %></p>
+	        </div>
+	        <% if policy.trump_choice == "Left" %>
+	          <div class="col-md-10 offset-md-1 policy-slider">
+	            <img class="policy-slider-img" src="images/left-slider.png">
+	          </div>
+	        <% elsif policy.trump_choice == "Middle" %>  
+	          <div class="col-md-10 offset-md-1 policy-slider">
+	            <img class="policy-slider-img" src="images/middle-slider.png">
+	          </div>
+	        <% else %> 
+	          <div class="col-md-10 offset-md-1 policy-slider">
+	            <img class="policy-slider-img" src="images/right-slider.png">
+	          </div>  
+	        <% end %>   
+	      </div>
+	      <div class="col-md-12">
+	        <hr>
+	      </div>
+	    <% end %>
+	  </div>
+	</div>
+</section>

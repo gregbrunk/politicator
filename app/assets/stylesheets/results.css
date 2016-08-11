@@ -1,0 +1,126 @@
+.results-background {
+	display: flex;
+	background-color: #4A90E2;
+}
+
+.results-box {
+	display: flex;
+    margin: 13vh auto;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.results-column {
+    padding-bottom: 30px;
+    border-right: 1px lightgrey solid;
+}
+
+.results-column-user {
+    padding-bottom: 30px;
+    border-right: 1px lightgrey solid;
+    background-color: #F1F1F1;
+}
+
+.results-column-right {
+    padding-bottom: 30px;
+}
+
+.results-column-head {
+	height: 225px;
+	text-align: center;
+	border-bottom: 1px lightgrey solid;
+	margin-bottom: 20px;
+}
+
+.results-page-header {
+	background-color: #4A90E2;
+	padding: 50px 0 30px 0;
+	text-align: center;
+}
+
+.results-page-header h1 {
+	color: white;
+	font-size: 50px;
+	font-family: 'Avenir Next LT Pro Ultra Light';
+}
+
+.dashboard {
+    border-radius: 30px;
+    background-color: white;
+   	padding: 30px 0 30px 0;
+   	text-align: center;
+   	height: 375px;
+   	margin-top: 30px;
+}
+
+.dashboard-column-left {
+	border-right: 1px lightgrey solid;
+}
+
+.results-img-candidate-left {
+	width: 200px;
+    height: 200px;
+    border: 6px solid white;
+    border-radius: 200px;
+    background-size: cover;
+    background-position: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    padding-top: 60px;
+}
+
+.results-img-candidate-left h2 {
+	color: white;
+	font-size: 70px;
+	font-family: 'Avenir Next LT Pro Ultra Light';
+}
+
+.dashboard-subhead-left {
+	margin-top: 225px;
+	font-size: 28px;
+	color: #4A90E2;
+	margin-bottom: 0;
+}
+
+.dashboard-subhead2-left {
+	font-size: 28px;
+	color: #4A90E2;
+	margin-top: 0px;
+}
+
+.dashboard-column-left {
+	border-right: 1px lightgrey solid;
+}
+
+.results-img-candidate-right{
+	width: 200px;
+    height: 200px;
+    border: 6px solid white;
+    border-radius: 200px;
+    background-size: cover;
+    background-position: 50%;
+    position: absolute;
+    right: 50%;
+    margin-right: -100px;
+    padding-top: 60px;
+}
+
+.results-img-candidate-right h2 {
+	color: white;
+	font-size: 70px;
+	font-family: 'Avenir Next LT Pro Ultra Light';
+}
+
+.dashboard-subhead-right {
+	margin-top: 225px;
+	font-size: 28px;
+	color: #C05858;
+	margin-bottom: 0;
+}
+
+.dashboard-subhead2-right {
+	font-size: 28px;
+	color: #C05858;
+	margin-top: 0px; 
+}
