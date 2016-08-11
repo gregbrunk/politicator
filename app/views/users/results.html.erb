@@ -3,17 +3,17 @@
   <div class="dashboard col-md-8 offset-md-2">
   	<div class="col-md-6 dashboard-column-left">
       	<div class="results-img-candidate-left" style="background-image: url('/images/HillaryOverlay.png')">
-        	<h2>75%</h2>
+        	<h2><%=@hillary_compatible%>%</h2>
       	</div>
       	<p class="dashboard-subhead-left">Hillary Clinton</p>
-      	<p class="dashboard-subhead2-left">Policies Matched: 8/12</p>
+      	<p class="dashboard-subhead2-left">Policies Matched: <%=@hillary_counter%>/12</p>
   	</div>
 	  	<div class="col-md-6">
 	      	<div class="results-img-candidate-right" style="background-image: url('/images/TrumpOverlay.png')">
-	        	<h2>35%</h2>
+	        	<h2><%=@trump_compatible%>%</h2>
 	      	</div>
 	      	<p class="dashboard-subhead-right">Donald Trump</p>
-	      	<p class="dashboard-subhead2-right">Policies Matched: 3/12</p>
+	      	<p class="dashboard-subhead2-right">Policies Matched: <%=@trump_counter%>/12</p>
 	  	</div>
   </div>
 </div>
