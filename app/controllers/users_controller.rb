@@ -10,9 +10,43 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @user = current_user
-    
-  end
+    @user = current_user  
+    @policies = Policy.all
+    @choices = @user.choices
+    trump_counter = 0
+    hillary_counter = 0
+    @hillary_compatible = 0
+    @trump_compatible = 0
+
+      @policies.each do |policy|
+        @hillary_choice = policy.hillary_choice
+          p @hillary_choice
+        @trump_choice = policy.trump_choice
+          p @trump_choice
+        @user_choice = @choices.find_by policy_id: policy.id
+          p @user_choice 
+
+        if @hillary_choice == @user_choice.choice
+          hillary_counter +=1
+          p hillary_counter
+        else 
+          p hillary_counter
+        end
+
+        if @trump_choice == @user_choice.choice
+          trump_counter +=1
+          p trump_counter
+        else 
+          p trump_counter
+        end
+      end
+
+      @hillary_compatible = (hillary_counter.to_f / 12) * 100
+      p @hillary_compatible
+
+      @trump_compatible = (trump_counter.to_f / 12) * 100
+      p @trump_compatible
+  end  
 
   # GET /users/new
   def new
