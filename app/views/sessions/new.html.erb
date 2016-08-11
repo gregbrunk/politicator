@@ -1,46 +1,34 @@
-<!-- Sign In
-
-<%= form_for @user, url: "/sessions", method: "post" do |f| %>
-  <div>
-    <%= f.text_field :email, placeholder: "Email" %>
-  </div>
-  <div>
-    <%= f.password_field :password, placeholder: "Password" %>
-  </div>
-  <%= f.submit "Sign In" %>
-<% end %> -->
-
-	   <div class="modal-dialog">
-	       <!-- Modal content-->
-	       <div class="modal-content">
-		       <div class="container">
-		           <div class="modal-header">
-		               <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
+<div class="modal-dialog">
+   <!-- Modal content-->
+   <div class="modal-content">
+       <div class="container">
+           <div class="modal-header">
+               <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
+           </div>
+           <div class="col-sm-6 offset-sm-3"> 
+	           <div class="modal-body">
+		           <div class="login-header text-center">
+		           		<h3 class="modal-title">User login</h3>
 		           </div>
-		           <div class="col-sm-6 offset-sm-3"> 
-			           <div class="modal-body">
-				           <div class="login-header text-center">
-				           		<h3 class="modal-title">User login</h3>
-				           </div>
 
-				           <div class="modal-box">
-				                <%= form_for User.new, url: "/sessions", method: "post" do |f| %>
-				                <div class="form-group user_username">
-				                 <label for="email">Email:</label>
-				                 <%= f.text_field :email, :class => "form-control" %>
-				                </div>
-				                <div class="form-group user-password">
-				                 <label for="password_digest">Password:</label>
-				                 <%= f.password_field :password, :class => "form-control" %>
-				                </div> 
-				                <div class="form-group user-buttons">
-				                <%= f.submit "Sign In", :class => "btn btn-default btn-login-submit" %>
-				                <button type="button" class="btn btn-default btn-login-action" data-dismiss="modal" aria-hidden="true">Cancel</button>
-				                </div>
-				               <% end %>
-				            </div>
-			       		</div>
-		   			</div>
-				</div>
-			</div>
+		           <div class="modal-box">
+		                <%= form_for User.new, url: "/sessions", method: "post" do |f| %>
+		                <div class="form-group user_username">
+		                 <label for="email">Email:</label>
+		                 <%= f.text_field :email, :class => "form-control" %>
+		                </div>
+		                <div class="form-group user-password">
+		                 <label for="password_digest">Password:</label>
+		                 <%= f.password_field :password, :class => "form-control" %>
+		                </div> 
+		                <div class="form-group user-buttons">
+		                <%= f.submit "Sign In", :class => "btn btn-default btn-login-submit" %>
+		                <button type="button" class="btn btn-default btn-login-action" data-dismiss="modal" aria-hidden="true">Cancel</button>
+		                </div>
+		               <% end %>
+		            </div>
+	       		</div>
+   			</div>
 		</div>
+	</div>
+</div>

@@ -13,16 +13,19 @@
 .results-column {
     padding-bottom: 30px;
     border-right: 1px lightgrey solid;
+   	text-align: center;
 }
 
 .results-column-user {
     padding-bottom: 30px;
     border-right: 1px lightgrey solid;
     background-color: #F1F1F1;
+	text-align: center;
 }
 
 .results-column-right {
     padding-bottom: 30px;
+	text-align: center;
 }
 
 .results-column-head {
@@ -123,4 +126,8 @@
 	font-size: 28px;
 	color: #C05858;
 	margin-top: 0px; 
+}
+
+.see-more-button {
+	margin-top: 10px;
 }
