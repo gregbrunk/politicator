@@ -163,6 +163,8 @@ class UsersController < ApplicationController
       choice12.policy_id = 12
       choice12.user_id = current_user.id
     choice12.save
+
+    redirect_to results_path
   end
 
   def results
