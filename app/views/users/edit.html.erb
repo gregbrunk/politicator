@@ -1,6 +1,51 @@
-<h1>Editing User</h1>
-
-<%= render 'form', user: @user %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+       	<div class="container">
+    	<br>
+            <div class="col-sm-6 offset-sm-3"> 
+	            <div class="modal-body">
+		            <div class="login-header text-center">
+		               <h3 class="modal-title">Edit Profile</h3>
+		           	</div>
+	           		<div class="modal-box">
+			            <%= form_for @user do |f| %>
+			               <div class="form-group register_user_username">
+			                 <label for="first_name">First Name:</label>
+			                 <%= f.text_field :first_name, placeholder: "First Name", :class => 'form-control' %>
+			               </div>
+			               <div class="form-group register_user_username">
+			                 <label for="last_name">Last Name:</label>
+			                 <%= f.text_field :last_name, placeholder: "Last Name", :class => 'form-control' %>
+			               </div>
+			               <div class="form-group register_user_username">
+			                 <label for="party">Political Party:</label>
+			                 <%= f.text_field :party, placeholder: "Political Party", :class => 'form-control' %>
+			               </div>
+			               <div class="form-group register_user_username">
+			                 <label for="location">Location:</label>
+			                 <%= f.text_field :location, placeholder: "eg. Cincinnat, OH", :class => 'form-control' %>
+			               </div>
+			               <div class="form-group register_user_username">
+			                 <label for="profile_pic">Profile Photo:</label>
+			                 <%= f.text_field :profile_pic, placeholder: "Link to Profile Photo", :class => 'form-control' %>
+			               </div>
+			               <div class="form-group register_user_username">
+			                 <label for="email">Email:</label>
+			                 <%= f.text_field :email, placeholder: "Email", :class => 'form-control' %>
+			               </div>
+			               <div class="form-group register_user_username">
+			                 <label for="password_digest">Password:</label>
+			                 <%= f.password_field :password, placeholder: "Password", :class => 'form-control' %>
+			               </div> 
+			               <div class="form-group register_user-buttons">
+			                <%= f.submit "Submit", :class => 'btn btn-default btn-login-submit' %>
+			                <button type="button" class="btn btn-default btn-login-action" data-dismiss="modal" aria-hidden="true">Cancel</button>
+		                	</div>
+		             	<% end %>
+	            	</div>
+	        	</div>
+        	</div>	
+    	</div>
+	</div>
+</div>

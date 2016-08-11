@@ -64,9 +64,14 @@
 }
 
 .user_username {
-	padding: 30px 0 0 0;
+	padding: 5px 0 0 0;
 	color: white;
 	font-size: 20px;
+}
+
+.register_user_username {
+  color: white;
+  font-size: 20px;
 }
 
 .user-password {
@@ -76,8 +81,12 @@
 }
 
 .user-buttons {
-    margin-top: 60px !important;
-}    
+  margin-top: 60px !important;
+}  
+
+.register_user-buttons {
+  margin-top: 40px !important;
+}  
 
 .btn-login-submit {
   font-family: 'Avenir Next LT Pro Regular';
