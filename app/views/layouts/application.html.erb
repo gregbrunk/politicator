@@ -23,7 +23,8 @@
 		<div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar">
 			<ul class="nav navbar-nav pull-xs-left">
 				<li class="nav-item"><a href="/" role="button">Home</a></li>
-				<li class="nav-item"><a href="#" role="button">Candidates</a></li>
+				<li class="nav-item"><%= link_to 'About Us', about_path, method: :get %></li>
+				<li class="nav-item"><a href="/policies" role="button">Candidates</a></li>
 				<li class="nav-item"><%= link_to 'Take the Survey', new_survey_path, method: :get %></li>
 			</ul>
 			<ul class="nav navbar-nav pull-xs-right">

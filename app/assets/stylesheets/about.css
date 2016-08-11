@@ -1,21 +1,23 @@
 .about-background {
 	background-color: #4A90E2;
-	height: 100vh;
+	height: 95vh;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 .about-header-title {
-	margin-top: 2em;
 	font-family:'Avenir Next LT Pro Regular';
-	margin-top: 175px;
+	margin-top: 200px;
 	color: white;
+	margin-bottom: 15px;
 }
 
 .about-header-text {
 	font-family: 'Avenir Next LT Pro Ultra Light';
 	color: white;
 	font-size: 20px;
+	line-height: 35px;
+	margin-bottom: 30px;
 }
 
 .about-button {
@@ -23,13 +25,18 @@
 }
 
 .carrot-bottom {
-position: absolute;
-bottom: 0;
+	position: absolute;
+	bottom: 0;
 }
 
 #carrot {
 	text-align: center;
 	width: 100vw;
+}
+
+.carrot-bottom-image {
+	height: 5vh;
+	margin-top: 15px;
 }
 
 .meet-developers-text {
@@ -46,14 +53,17 @@ bottom: 0;
 
 .about-box {
 	background-image: url("/images/about_box.png");
-	height: 30vh;
+	height: 35vh;
 	background-size: 100%;
 	background-repeat: no-repeat;
 	padding: 70px;
+	margin-top: 20px;
 }
 
 .our-team-title {
 	color: #C05858;
+	margin-bottom: 20px;
+	margin-top: 35px;
 }
 
 .headshot {
@@ -63,7 +73,9 @@ bottom: 0;
 	background-position: 50% 50%;
 	border-radius: 50%;
 	margin-bottom: 20px;
-	-webkit-filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);    
+	box-shadow: 1px 2px 5px #2c2c2c;
+	border: 6px solid white;
 }
 
 .headshot-section {

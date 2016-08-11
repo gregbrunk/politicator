@@ -39,7 +39,7 @@
     position: absolute;
     left: 50%;
     margin-left: -100px;
-    box-shadow: 2px 3px 6px #2c2c2c;
+    box-shadow: 1px 2px 5px #2c2c2c;
 }
 
 .profile-edit-button-box {
@@ -120,7 +120,7 @@
     position: absolute;
     left: 50%;
     margin-left: -100px;
-    box-shadow: 2px 3px 6px #2c2c2c;
+    box-shadow: 1px 2px 5px #2c2c2c;
     text-align: center;
 }
 
@@ -136,6 +136,7 @@
 .survey-edit-button-box {
 	position: absolute;
     left: 2%;
+    margin-top: -10px;
 }
 
 #survey-edit-button {
