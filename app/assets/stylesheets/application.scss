@@ -87,7 +87,7 @@ html, body {
 
 #hero-headline {
 	text-align: center;
-	margin-top: 28vh;
+	margin-top: 25vh;
 	color: white;
     font-size: 140px;
 }
@@ -125,6 +125,7 @@ html, body {
     border-radius: 30px;
     background-color: white;
     height: 800px;
+    text-align: center;
 }
 
 .candidate-head {
@@ -245,11 +246,12 @@ html, body {
 
 /*Candidates Page*/
 .candidate-box-candidate-page {
-    margin-top: 15vh;
+    margin-top: 10vh;
     margin-bottom: 10vh;
     border-radius: 30px;
     background-color: white;
     padding-bottom: 30px;
+    text-align: center;
 }
 
 .candidates-page-header {

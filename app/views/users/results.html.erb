@@ -57,7 +57,7 @@
 	        <hr>
 	      </div>
 	    <% end %>
-	   	<%= button_to 'View More Resources', user_path(@user), method: :get, class: 'see-more-button btn btn-outline-primary', :id => 'cta-button' %>
+	   	<%= button_to 'View More Resources', resources_path, method: :get, class: 'see-more-button btn btn-outline-primary', :id => 'cta-button' %>
 	  </div>
 
 	  <!-- User Section -->
@@ -133,7 +133,7 @@
 	        <hr>
 	      </div>
 	    <% end %>
-	    <%= button_to 'View More Resources', user_path(@user), method: :get, class: 'see-more-button btn btn-outline-danger', :id => 'cta-button' %>
+	    <%= button_to 'View More Resources', resources_path, method: :get, class: 'see-more-button btn btn-outline-danger', :id => 'cta-button' %>
 	  </div>
 	</div>
 </section>
