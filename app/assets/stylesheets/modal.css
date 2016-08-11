@@ -1,0 +1,119 @@
+.modal-dialog {
+	max-width: 100% !important;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.modal-content {
+	height: 100%;
+	min-height: 100%;
+	height: auto;
+	border-radius: 0;
+	background-color: rgba(74, 144, 226, 0.8);
+}
+
+.modal-header {
+	border-bottom: transparent !important;
+}
+
+.login-header {
+	border-bottom: 1px solid white;
+	margin-bottom: 30px;
+}
+
+.modal-title {
+	font-family: 'Avenir Next LT Pro Regular';
+	font-size: 3.5rem;
+	color: white;
+}
+
+.close {
+  color: #fff;
+  font-size: 100px !important;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.close:hover {
+	color: white;
+}
+
+.modal-box > label {
+   display: inline-block;
+   max-width: 100%;
+   margin-bottom: 5px;
+   font-weight: bold;
+   font-size: 1.5rem;
+   color: #42494C;
+   font-family: 'Avenir Next LT Pro Regular';
+   padding: 10px 0;
+}
+
+.login-box > input {
+   font-family: 'Avenir Next LT Pro Regular';
+   background-color: transparent;
+   border: 1px solid #505558 ;
+   border-radius: 4px;
+   height: 54px;
+   font-size: 2.2rem;
+   color: white;
+   padding: 10px 20px;
+   -webkit-transition: all 0.3s ease-out;
+   transition: all 0.3s ease-out;
+}
+
+.user_username {
+	padding: 30px 0 0 0;
+	color: white;
+	font-size: 20px;
+}
+
+.user-password {
+    padding: 30px 0 0 0;
+    color: white;
+    font-size: 20px;
+}
+
+.user-buttons {
+    margin-top: 60px !important;
+}    
+
+.btn-login-submit {
+  font-family: 'Avenir Next LT Pro Regular';
+  background: #4A90E2;
+  color: white;
+  font-size: 1rem;
+  padding: 2.5% 19.5%;
+  width: 48%;
+  margin-bottom: 30px;
+  float: left;
+  display: inline;
+  margin-right: 10px;
+  border: 1px white solid;
+}
+
+ .btn-login-action {
+  font-family: 'Avenir Next LT Pro Regular';
+  background: #C05858;
+  color: white;
+  font-size: 1rem;
+  padding: 2.5% 19.5%;
+  width: 48%;
+  display: inline;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  border: 1px white solid;
+}
+
+.btn-login-submit:hover, .btn-login-action:hover {
+	background: white;
+	color: #C05858;
+}
+
+
+
+.modal-full {
+	height: 100%;
+	width: 100%;
+}
