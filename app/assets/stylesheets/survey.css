@@ -1,0 +1,74 @@
+.survey-background {
+	background-color: #4A90E2;
+	color: white;
+}
+
+.survey-button	{
+	padding: 10px;
+}
+
+.form-container {
+	text-align: center;
+}
+
+.entire-form {
+	padding-top: 70px;
+}
+
+.each-policy-div {
+	border-bottom: 1px solid lightgrey;
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+.each-policy-div:hover {
+	background-color: #3483de;
+	transition: background-color 0.5s ease;
+}
+
+.policy-name-survey {
+	font-family:'Avenir Next LT Pro Regular';
+}
+
+.policy-left-description {
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Avenir Next LT Pro Ultra Light';
+}
+
+.policy-right-description {
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Avenir Next LT Pro Ultra Light';
+}
+
+.left-survey-button {
+	margin-right: 9em;
+}
+
+.right-survey-button {
+	margin-left: 9em;
+}
+
+.survey-submit {
+	background-color: white;
+	margin-bottom: 25px;
+	margin-top: 25px;
+	font-family:'Avenir Next LT Pro Regular';
+	color: #C05858;
+	border: 2px solid #C05858;
+	width: 175px;
+	border-radius: 30px;
+	font-size: 20px;
+	padding-top: 3px;
+}
+
+.survey-submit:hover {
+	background-color: #C05858;
+	color: white;
+}	
+
+
+.policy-hover {
+	color: white;
+}
