@@ -1,0 +1,35 @@
+<div class="survey-background">
+	<div class="container form-container">
+		<div class="col-md-12">
+			<div class="entire-form">
+			<%= form_tag(update_survey_path, method: "patch") do |f| %>
+				  	<% @policies.each do |policy| %>
+						<div class="col-md-12 each-policy-div">
+						  	<div class="col-md-12 name-and-description">
+							    <h3 class="policy-name-survey"><%= policy.name %></h3>
+							    <div class="col-md-3 offset-md-2 col-xs-6">
+							    	<p class="policy-left-description"><%= policy.left %></p>
+							    </div>
+							    <div class="col-md-3">
+							    </div>
+							    <div class="col-md-3 offset-md-2 col-xs-6">
+							    	<p class="policy-right-description"><%= policy.right %></p>
+							    </div>
+							</div>	
+							<div class="input-group">
+								<div class="col-md-12 survey-buttons">    	
+								    <input class="left-survey-button" style="height:35px; width:35px;" name="policy_<%=policy.id%>" type="radio" value="Left" required>
+								    <input class="middle-survey-button" style="height:35px; width:35px;" name="policy_<%=policy.id%>" type="radio" value="Middle" required> 
+								    <input class="right-survey-button" style="height:35px; width:35px;" name="policy_<%=policy.id%>" type="radio" value="Right" required> 
+								</div>
+							</div>	
+						</div>
+				  	<% end %>
+					<div>
+						<input class="survey-submit" type="submit" value="Submit">
+					</div>	
+				<% end %>
+			</div>
+		</div>
+	</div>
+<div>

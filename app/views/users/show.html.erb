@@ -24,7 +24,7 @@
 <section class="profile-content">
   <% if @choices.empty? == false %>
     <div class="survey-edit-button-box">
-      <%= link_to 'Edit', edit_user_path(@user), method: :get, :id => 'survey-edit-button' %> &nbsp|&nbsp
+      <%= link_to 'Edit', edit_survey_path, method: :get, :id => 'survey-edit-button' %> &nbsp|&nbsp
       <%= link_to 'Delete', edit_user_path(@user), method: :get, :id => 'survey-edit-button' %>
     </div>
     <p>Your Compatability Results</p>

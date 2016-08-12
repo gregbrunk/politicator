@@ -2,13 +2,11 @@ class UsersController < ApplicationController
   before_action :logged_in?, only: [:show, :edit, :update, :destroy, :new_survey, :results]
 
   # GET /users
-  # GET /users.json
   def index
     @users = User.all
   end
 
   # GET /users/1
-  # GET /users/1.json
   def show
     @user = current_user
     @choices = @user.choices
@@ -49,7 +47,6 @@ class UsersController < ApplicationController
   end
 
   # POST /users
-  # POST /users.json
   def create
     @user = User.create(user_params)
     login(@user) # <-- login the user
@@ -57,7 +54,6 @@ class UsersController < ApplicationController
   end
 
   # PATCH/PUT /users/1
-  # PATCH/PUT /users/1.json
   def update
     @user = User.find(params[:id])
     @user.update_attributes(user_params)
@@ -74,8 +70,13 @@ class UsersController < ApplicationController
 
   def new_survey
     @user = current_user
-    @policies = Policy.all
-    render :new_survey
+    @choices = @user.choices
+    if @choices.empty? == false
+      redirect_to results_path
+    else 
+      @policies = Policy.all
+      render :new_survey
+    end
   end
 
   def create_survey
@@ -163,6 +164,46 @@ class UsersController < ApplicationController
       choice12.policy_id = 12
       choice12.user_id = current_user.id
     choice12.save
+
+    redirect_to results_path
+  end
+
+  def edit_survey
+    @user = current_user
+    @choices = @user.choices
+    @policies = Policy.all
+    render :edit_survey
+  end
+
+  def update_survey
+    @user = current_user
+    @choices = @user.choices
+
+    answer1 = params[:policy_1]
+    answer2 = params[:policy_2]
+    answer3 = params[:policy_3]
+    answer4 = params[:policy_4]
+    answer5 = params[:policy_5]
+    answer6 = params[:policy_6]
+    answer7 = params[:policy_7]
+    answer8 = params[:policy_8]
+    answer9 = params[:policy_9]
+    answer10 = params[:policy_10]
+    answer11 = params[:policy_11]
+    answer12 = params[:policy_12]
+
+    @choices.find_by(policy_id: 1).update_attributes({choice: answer1})
+    @choices.find_by(policy_id: 2).update_attributes({choice: answer2})
+    @choices.find_by(policy_id: 3).update_attributes({choice: answer3})
+    @choices.find_by(policy_id: 4).update_attributes({choice: answer4})
+    @choices.find_by(policy_id: 5).update_attributes({choice: answer5})
+    @choices.find_by(policy_id: 6).update_attributes({choice: answer6})    
+    @choices.find_by(policy_id: 7).update_attributes({choice: answer7})
+    @choices.find_by(policy_id: 8).update_attributes({choice: answer8})
+    @choices.find_by(policy_id: 9).update_attributes({choice: answer9})
+    @choices.find_by(policy_id: 10).update_attributes({choice: answer10})
+    @choices.find_by(policy_id: 11).update_attributes({choice: answer11})
+    @choices.find_by(policy_id: 12).update_attributes({choice: answer12})
 
     redirect_to results_path
   end
