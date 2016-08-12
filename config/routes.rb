@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   post "/survey", to: "users#create_survey", as: "create_survey"
   get "/survey/edit", to: "users#edit_survey", as: "edit_survey"
   patch "/survey", to: "users#update_survey", as: "update_survey"
+  delete "/survey", to: "users#delete_survey", as: "delete_survey"
   get "/results", to: "users#results", as: "results"
 
   # Policy Routes
