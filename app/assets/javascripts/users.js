@@ -14,6 +14,7 @@ console.log("running this function");
          error: function(error) {
             $("#register_modal_error").removeClass('hidden');
              $("#register_modal_error").text(error.responseText);
+             $("#register-submit").removeAttr("disabled").attr('value', 'Submit');
              console.log('in the error');
          }
      });
