@@ -103,3 +103,45 @@
 	margin-top: -20px;
 }
 
+.icon-right{
+	margin-right: 50%;
+}
+
+
+@media (max-width: 768px) {
+	.about-icon {
+		margin-top: 60px;
+	}
+
+	.about-header-title {
+		margin-top: 50px;
+	}
+
+	.about-header-title {
+		text-align: center;
+	}
+
+	.about-header-text {
+		text-align: center;
+	}
+
+	.about-background {
+		text-align: center;
+	}
+
+	.headshot-section {
+		text-align: center;
+	}
+
+	.about-box {
+		border-top: 1px solid lightgrey;
+		background: none;
+		padding: 40px;
+		height: 28vh;
+	}
+
+	.headshot {
+		margin: 0 auto 10px auto;
+
+	}
+}
