@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @choices = @user.choices
+    
     if @choices.empty? == false
       @policies = Policy.all
       @trump_counter = 0
@@ -17,19 +18,19 @@ class UsersController < ApplicationController
       @hillary_compatible = 0
       @trump_compatible = 0
 
-        @policies.each do |policy|
-          @hillary_choice = policy.hillary_choice
-          @trump_choice = policy.trump_choice
-          @user_choice = @choices.find_by policy_id: policy.id
+      @policies.each do |policy|
+        @hillary_choice = policy.hillary_choice
+        @trump_choice = policy.trump_choice
+        @user_choice = @choices.find_by policy_id: policy.id
 
-          if @hillary_choice == @user_choice.choice
-            @hillary_counter +=1
-          end
-
-          if @trump_choice == @user_choice.choice
-            @trump_counter +=1
-          end
+        if @hillary_choice == @user_choice.choice
+          @hillary_counter +=1
         end
+
+        if @trump_choice == @user_choice.choice
+          @trump_counter +=1
+        end
+      end
 
       @hillary_compatible = ((@hillary_counter.to_f / 12) * 100).floor
       @trump_compatible = ((@trump_counter.to_f / 12) * 100).floor
@@ -211,6 +212,17 @@ class UsersController < ApplicationController
     @choices.find_by(policy_id: 12).update_attributes({choice: answer12})
 
     redirect_to results_path
+  end
+
+  def delete_survey
+    @user = current_user
+    @choices = @user.choices
+    
+    @choices.each do |choice|
+      choice.destroy
+    end
+    
+    redirect_to user_path(@user)
   end
 
   def results
