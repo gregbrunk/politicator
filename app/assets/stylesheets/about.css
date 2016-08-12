@@ -70,6 +70,10 @@
 	margin-top: 20px;
 }
 
+.about-box p {
+	font-size: 1.5em;
+}
+
 .our-team-title {
 	color: #C05858;
 	margin-bottom: 20px;
@@ -142,6 +146,5 @@
 
 	.headshot {
 		margin: 0 auto 10px auto;
-
 	}
 }
