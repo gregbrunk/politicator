@@ -51,9 +51,14 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.create(user_params)
+    @user = User.new(user_params)
+    if @user.save
     login(@user) # <-- login the user
-    redirect_to "/users/#{@user.id}" # <-- go to show
+    redirect_to "/profile" # <-- go to show
+  else
+      temp = @user.errors.full_messages.join(", ")
+      render :json => temp
+    end
   end
 
   # PATCH/PUT /users/1
