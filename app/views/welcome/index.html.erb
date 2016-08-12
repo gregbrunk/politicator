@@ -7,14 +7,14 @@
 
 <!-- Call to Action Content -->
 <section class="cta">
-	<p class="cta-header">You think you know where you stand. But are you sure?</p>
+	<p class="cta-header col-md-12 offset-md-0 col-sm-10 offset-sm-1">You think you know where you stand. But are you sure?</p>
 	<%= button_to 'Find Out', new_survey_path, method: :get, class: 'btn btn-outline-danger', :id => 'cta-button' %>
 </section>
 
 <!-- Candidate Content -->
 <section class="candidates-section">
 	<!-- Hillary Section -->
-	<div class="col-md-4 offset-md-1 col-xs-10 offset-xs-1 candidate-box">
+	<div class="container col-md-4 offset-md-1 col-sm-12 candidate-box">
 		<!-- Candidate Details -->
 		<div class="col-md-12 candidate-head">
 			<div class="candidate-img" style="background-image: url('/images/Hillary.jpg')"></div>
@@ -44,7 +44,7 @@
 		</div>
 	</div>
 	<!-- Trump Section -->
-	<div class="col-md-4 offset-md-2 col-xs-10 offset-xs-1 candidate-box">
+	<div class="container col-md-4 offset-md-2 col-sm-12 candidate-box">
 		<div class="col-md-12 candidate-head">
 			<div class="candidate-img" style="background-image: url('images/Trump.jpg')"></div>
 			<p class="candidate-name">Donald John Trump, Sr.</p>
