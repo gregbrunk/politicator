@@ -244,27 +244,33 @@ html, body {
 	font-size: 18px;
 }
 
-/*Candidates Page*/
-.candidate-box-candidate-page {
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    border-radius: 30px;
-    background-color: white;
-    padding-bottom: 30px;
-    text-align: center;
-}
+// Media Queries
 
-.candidates-page-header {
-	background-color: #4A90E2;
-	height: 15vh;
-	text-align: center;
-}
+@media (max-width: 768px) {
+	.hero {
+		height: 40vh;
+	}
 
-.candidates-page-header p {
-	color: white;
-	font-size: 50px;
-	padding-top: 60px;
-	font-family: 'Avenir Next LT Pro Ultra Light';
+	#hero-headline {
+		margin-top: 12vh;
+	    font-size: 100px;
+	}
+	.cta {
+		height: 20vh;
+	}
+
+	.cta-header {
+		padding-top: 25px;
+	}
+	
+	.candidates-section {
+		
+	}
+
+	.candidate-box {
+		margin-top: 5vh;
+		display: block;
+	}
 }
 
 
