@@ -147,3 +147,23 @@
 .take-survey-box {
 	margin-top: 12vh;
 }
+
+@media (max-width: 768px) {
+	.profile-content {
+		height: 750px;
+	}
+	.candidate-percent {
+		height: 140px;
+		padding-top: 40px;
+	}
+	.survey-edit-button-box {
+		margin: 30px auto 0 auto;
+		position: relative;
+	}
+	.profile-content p {
+		margin-top: 40px;
+	}
+	.profile-hero {
+		height: 60vh;
+	}
+}

@@ -31,23 +31,23 @@
 }
 
 .policy-left-description {
-	text-align: center;
+	text-align: left;
 	font-size: 20px;
 	font-family: 'Avenir Next LT Pro Ultra Light';
 }
 
 .policy-right-description {
-	text-align: center;
+	text-align: right;
 	font-size: 20px;
 	font-family: 'Avenir Next LT Pro Ultra Light';
 }
 
 .left-survey-button {
-	margin-right: 9em;
+	margin-right: 11em;
 }
 
 .right-survey-button {
-	margin-left: 9em;
+	margin-left: 11em;
 }
 
 .survey-submit {
@@ -72,3 +72,14 @@
 .policy-hover {
 	color: white;
 }
+
+@media (max-width: 768px) {
+	.left-survey-button {
+		margin-right: 6em;
+	}
+
+	.right-survey-button {
+		margin-left: 6em;
+	}
+}
+

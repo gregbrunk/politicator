@@ -1,17 +1,15 @@
-<div class="row">
-  <div class="candidates-page-header col-md-12">
-    <p>Where Do Our Candidates Stand?</p>
-  </div>
+<div class="candidates-page-header col-md-12">
+  <p>Where Do Our Candidates Stand?</p>
 </div>
 
 <!-- Candidate Content -->
-<section class="candidates-section">
+<section class="candidates-section-candidate-page">
   <!-- Hillary Section -->
   <div class="col-md-4 offset-md-1 col-xs-10 offset-xs-1 candidate-box-candidate-page">
     <!-- Candidate Details -->
     <div class="col-md-12 candidate-head">
-      <div class="candidate-img" style="background-image: url('images/Hillary.jpg')"></div>
-      <p class="candidate-name">Hillary Rodham Clinton</p>
+      <div class="candidate-img-candidate-page" style="background-image: url('images/Hillary.jpg')"></div>
+      <p class="candidate-name-candidate-page">Hillary Rodham Clinton</p>
       <p>Party: <span class="candidate-party-left">Democrat</span></p>
       <hr>
     </div>
@@ -19,10 +17,10 @@
     <% @policies.each do |policy| %>
       <div class="col-md-12 candidate-policies-box">
         <p class="policy-name"><%= policy.name %></p>
-        <div class="col-md-5 offset-md-1 policy-value-left">
+        <div class="col-md-5 offset-md-1 col-xs-6 policy-value-left">
           <p><%= policy.left %></p>
         </div>
-        <div class="col-md-5 policy-value-right">
+        <div class="col-md-5 col-xs-6 policy-value-right">
           <p><%= policy.right %></p>
         </div>
         <% if policy.hillary_choice == "Left" %>
@@ -52,8 +50,8 @@
   <!-- Trump Section -->
   <div class="col-md-4 offset-md-2 col-xs-10 offset-xs-1 candidate-box-candidate-page">
     <div class="col-md-12 candidate-head">
-      <div class="candidate-img" style="background-image: url('images/Trump.jpg')"></div>
-      <p class="candidate-name">Donald John Trump, Sr.</p>
+      <div class="candidate-img-candidate-page" style="background-image: url('images/Trump.jpg')"></div>
+      <p class="candidate-name-candidate-page">Donald John Trump, Sr.</p>
       <p>Party: <span class="candidate-party-right">Republican</span></p>
       <hr>
     </div>
@@ -61,10 +59,10 @@
     <% @policies.each do |policy| %>
       <div class="col-md-12 candidate-policies-box">
         <p class="policy-name"><%= policy.name %></p>
-        <div class="col-md-5 offset-md-1 policy-value-left">
+        <div class="col-md-5 col-xs-6 offset-md-1 policy-value-left">
           <p><%= policy.left %></p>
         </div>
-        <div class="col-md-5 policy-value-right">
+        <div class="col-md-5 col-xs-6 policy-value-right">
           <p><%= policy.right %></p>
         </div>
         <% if policy.trump_choice == "Left" %>

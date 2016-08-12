@@ -8,6 +8,12 @@
     text-align: center;
 }
 
+.candidates-section-candidate-page {
+	display: inline-block;
+	background-color: #4A90E2;
+	margin-bottom: -10px;
+}
+
 .candidates-page-header {
 	background-color: #4A90E2;
 	height: 15vh;
@@ -19,4 +25,43 @@
 	font-size: 50px;
 	padding-top: 60px;
 	font-family: 'Avenir Next LT Pro Ultra Light';
+}
+
+.candidate-name-candidate-page {
+	margin-top: 120px;
+	font-size: 40px;
+	margin-bottom: 0;
+}
+
+.candidate-img-candidate-page {
+    position: absolute;
+    left: 50%;
+    margin: 0 0 0 -100px;
+    top: -100px;
+    width: 200px;
+    height: 200px;
+    border: 6px solid white;
+    border-radius: 100px;
+    background-size: cover;
+    background-position: 50%;
+}
+
+@media (max-width: 768px) {
+	.candidates-section-candidate-page {
+		display: inline-block;
+		padding-top: 80px;
+		margin-bottom: -10px;
+	}
+
+	.candidate-box-candidate-page {
+	    margin-top: 10vh;
+	    margin-bottom: 10vh;
+	    border-radius: 30px;
+	    background-color: none;
+	    padding-bottom: 30px;
+	    text-align: center;
+	}
+	.candidate-img-candidate-page {
+		top: -250px;
+	}
 }

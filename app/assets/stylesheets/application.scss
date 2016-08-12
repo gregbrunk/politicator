@@ -54,6 +54,10 @@ html, body {
 	z-index: 10;
 }
 
+#exCollapsingNavbar {
+	text-align: center;
+}
+
 #nav-photo {
 	height: 25px;
 	width: 25px;
@@ -153,7 +157,7 @@ html, body {
 }
 
 .candidate-name {
-	margin-top: 120px;
+	margin-top: 140px;
 	font-size: 40px;
 	margin-bottom: 0;
 }
@@ -183,8 +187,7 @@ html, body {
 }
 
 .policy-value-left p {
-	font-size: 1.1vw;
-
+	font-size: 18px;
 }
 
 .policy-value-right {
@@ -192,7 +195,7 @@ html, body {
 }
 
 .policy-value-right p {
-	font-size: 1.1vw;
+	font-size: 18px;
 }
 
 .policy-slider {
@@ -275,8 +278,9 @@ html, body {
 	}
 	
 	.candidates-section {
+		text-align: center;
 		display: block;
-		height: 200px;
+		padding-bottom: 40px;
 	}
 
 	.candidate-box {
@@ -313,6 +317,23 @@ html, body {
 		border: 1px solid white !important;
 		color: white;
 	}
+
+	.policy-value-left p {
+		font-size: 16px;
+	}
+
+	.policy-value-right p {
+		font-size: 16px;
+	}
+
+	.candidate-policies-box {
+		margin: 40px 0 80px 0;
+	}
+
+	.candidate-quote {
+		margin-top: 80px;
+	}
+
 }
 
 

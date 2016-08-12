@@ -29,7 +29,7 @@
 }
 
 .results-column-head {
-	height: 225px;
+	height: 275px;
 	text-align: center;
 	border-bottom: 1px lightgrey solid;
 	margin-bottom: 20px;
@@ -77,6 +77,19 @@
 	color: white;
 	font-size: 70px;
 	font-family: 'Avenir Next LT Pro Ultra Light';
+}
+
+.candidate-img-results-page {
+    position: absolute;
+    left: 50%;
+    margin: 0 0 0 -100px;
+    top: -100px;
+    width: 200px;
+    height: 200px;
+    border: 6px solid white;
+    border-radius: 100px;
+    background-size: cover;
+    background-position: 50%;
 }
 
 .dashboard-subhead-left {
@@ -130,4 +143,31 @@
 
 .see-more-button {
 	margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+	.results-column {
+		display: none;
+	}
+
+	.results-column-right {
+		display: none;
+	}
+
+	.results-column-user {
+		background: none;
+		border: none;
+	}
+
+	.dashboard {
+		height: 700px;
+	}
+
+	.candidate-img-results-page {
+	    top: -250px;
+	}
+
+	.results-column-head {
+		height: 115px;
+	}
 }
