@@ -65,6 +65,13 @@ html, body {
 	color: #C05858 !important;
 }
 
+.navbar-toggler{
+	background-image: url('http://mour.org/wp-content/uploads/2015/04/5971-0405-01.png');
+	background-size: cover;
+	background-position: 50% 50%;
+	margin-top: -15px;
+}
+
 /*Index Page*/
 /*Hero Section*/
 .hero {
@@ -244,6 +251,10 @@ html, body {
 	font-size: 18px;
 }
 
+.mobile-candidates-button {
+	display: none;
+}
+
 // Media Queries
 
 @media (max-width: 768px) {
@@ -264,12 +275,43 @@ html, body {
 	}
 	
 	.candidates-section {
-		
+		display: block;
+		height: 200px;
 	}
 
 	.candidate-box {
-		margin-top: 5vh;
+		display: none
+	}
+
+	.mobile-candidates-button {
 		display: block;
+		text-align: center;
+		padding: 45px 20px 0px 20px;
+		font-size: 20px;
+	}
+
+	.mobile-candidates-button p {
+		color: white;
+	}
+
+	.footer {
+		height: 20vh;
+		background: linear-gradient(#252525, #282828);
+		text-align: center;
+		padding: 40px;
+	}
+
+	.collapse {
+		background-color: white;
+		margin: 15px -18px 0 -20px;
+		padding: 30px;
+		font-size: 25px;
+	}
+
+	.lol-button {
+		background-color: transparent !important;
+		border: 1px solid white !important;
+		color: white;
 	}
 }
 

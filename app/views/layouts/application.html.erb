@@ -18,16 +18,16 @@
 	<!-- Navigation Bar -->
 	<nav class="navbar navbar-fixed-top">
 		<!--Burger navbar -->
-		<button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"></button>
+		<button type="button" class="navbar-toggler hidden-md-up" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"></button>
 		<a class="navbar-brand" href="/">Politicator</a>
-		<div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar">
-			<ul class="nav navbar-nav pull-xs-left">
+		<div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar">
+			<ul class="nav navbar-nav pull-md-left">
 				<li class="nav-item"><a href="/" role="button">Home</a></li>
 				<li class="nav-item"><%= link_to 'About Us', about_path, method: :get %></li>
 				<li class="nav-item"><a href="/policies" role="button">Candidates</a></li>
 				<li class="nav-item"><%= link_to 'Go to Survey', new_survey_path, method: :get %></li>
 			</ul>
-			<ul class="nav navbar-nav pull-xs-right">
+			<ul class="nav navbar-nav pull-md-right">
 				<% if current_user == nil %>
 	                <li class="nav-item"><a href="#loginModal" role="button" data-toggle="modal">Login</a></li>
 	                <li class="nav-item"><a href="#registerModal" role="button" data-toggle="modal">Sign Up!</a></li>
