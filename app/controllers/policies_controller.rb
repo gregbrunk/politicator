@@ -2,13 +2,11 @@ class PoliciesController < ApplicationController
   before_action :set_policy, only: [:show, :edit, :update, :destroy]
 
   # GET /policies
-  # GET /policies.json
   def index
     @policies = Policy.all
   end
 
   # GET /policies/1
-  # GET /policies/1.json
   def show
     @policy = Policy.find(params[:id])
   end
@@ -24,7 +22,6 @@ class PoliciesController < ApplicationController
   end
 
   # POST /policies
-  # POST /policies.json
   def create
     @policy = Policy.new(policy_params)
     @policy.save
@@ -32,7 +29,6 @@ class PoliciesController < ApplicationController
   end
 
   # PATCH/PUT /policies/1
-  # PATCH/PUT /policies/1.json
   def update
     @policy = Policy.find(params[:id])
     @policy.update_attributes(policy_params)
@@ -40,7 +36,6 @@ class PoliciesController < ApplicationController
   end
 
   # DELETE /policies/1
-  # DELETE /policies/1.json
   def destroy
     policy = Policy.find(params[:id])
     @policy.destroy

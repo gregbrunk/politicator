@@ -6,7 +6,6 @@ class ChoicesController < ApplicationController
   end
 
   # GET /policies/1
-  # GET /policies/1.json
   def show
     @choice = Choice.find(params[:id])
   end
@@ -22,7 +21,6 @@ class ChoicesController < ApplicationController
   end
 
   # POST /policies
-  # POST /policies.json
   def create
     @choice = Choice.new(choice_params)
     @choice.save
@@ -30,7 +28,6 @@ class ChoicesController < ApplicationController
   end
 
   # PATCH/PUT /policies/1
-  # PATCH/PUT /policies/1.json
   def update
     @choice = Choice.find(params[:id])
     @choice.update_attributes(choice_params)
@@ -38,7 +35,6 @@ class ChoicesController < ApplicationController
   end
 
   # DELETE /policies/1
-  # DELETE /policies/1.json
   def destroy
     choice = Choice.find(params[:id])
     @choice.destroy

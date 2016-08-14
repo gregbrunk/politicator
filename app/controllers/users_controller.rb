@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  # Sets up authorization
   before_action :logged_in?, only: [:show, :edit, :update, :destroy, :new_survey, :results]
 
   # GET /users
@@ -11,6 +12,7 @@ class UsersController < ApplicationController
     @user = current_user
     @choices = @user.choices
     
+    # Math for calculating compatibility with candidates
     if @choices.empty? == false
       @policies = Policy.all
       @trump_counter = 0
@@ -39,7 +41,7 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
-    # @user = User.new
+    @user = User.new
   end
 
   # GET /users/1/edit
@@ -51,9 +53,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-    login(@user) # <-- login the user
-    redirect_to "/profile" # <-- go to show
-  else
+      login(@user) # <-- login the user
+      redirect_to profile_path # <-- go to show
+    else
+      # Error handling
       temp = @user.errors.full_messages.join(", ")
       render :json => temp
     end
@@ -67,16 +70,20 @@ class UsersController < ApplicationController
   end
 
   # DELETE /users/1
-  # DELETE /users/1.json
   def destroy
     @user = User.find(params[:id])
     @user.destroy
     redirect_to users_path
   end
 
+# Below are survey methods for the user
+# Provides RESTful actions for user surveys
+  
+  # Main survey screen
   def new_survey
     @user = current_user
     @choices = @user.choices
+    # Re-route user if survey has already been taken
     if @choices.empty? == false
       redirect_to results_path
     else 
@@ -85,7 +92,10 @@ class UsersController < ApplicationController
     end
   end
 
+  # Save survey results to choices model
+  # This is NOT DRY or scalable. Needs work. But works...
   def create_survey
+    # Grab all answers
     answer1 = params[:policy_1]
     answer2 = params[:policy_2]
     answer3 = params[:policy_3]
@@ -99,6 +109,7 @@ class UsersController < ApplicationController
     answer11 = params[:policy_11]
     answer12 = params[:policy_12]
     
+    # Create 12 choices in the DB
     choice1 = Choice.new()
       choice1.choice = answer1
       choice1.policy_id = 1
@@ -174,6 +185,8 @@ class UsersController < ApplicationController
     redirect_to results_path
   end
 
+  # Edit method for survey
+  # Also not DRY - also needs work.
   def edit_survey
     @user = current_user
     @choices = @user.choices
@@ -181,6 +194,7 @@ class UsersController < ApplicationController
     render :edit_survey
   end
 
+  # Save updates to DB
   def update_survey
     @user = current_user
     @choices = @user.choices
@@ -214,6 +228,7 @@ class UsersController < ApplicationController
     redirect_to results_path
   end
 
+  # Delete a survey
   def delete_survey
     @user = current_user
     @choices = @user.choices
@@ -225,10 +240,13 @@ class UsersController < ApplicationController
     redirect_to user_path(@user)
   end
 
+  # View survey results
   def results
     @policies = Policy.all
     @user = current_user
     @choices = @user.choices
+    
+    # Math for calculating compatibility with candidates
     if @choices.empty? == false
       @policies = Policy.all
       @trump_counter = 0
