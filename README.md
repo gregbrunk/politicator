@@ -1,24 +1,35 @@
-# README
+# politicator
+politicator is a prototype app that helps users undestand how their political leanings stack up against our presidential candidates. Think you know where you stand? See if you're right! Want to know more about what our candidates think about major current policies? This is the perfect app for you. See supporting quotes from the candidates themselves and take a quick survey to find out who you align with on major current issues. Visit the live app here: http://politicator.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Original Design:**
+![Alt text](/public/images/homepage.jpg?raw=true "Home Page Design")
 
-Things you may want to cover:
+The goal of this project was to work in a 4 person team to build a full-stack app in Ruby on Rails, using Active Record to interact with a PostgreSQL database. That app needed to have multiple models, RESTful routes, users and authentication, authorization, error handling, and password encryption. The app also needed be mobile optimized and showcase an appealing UI. The purpose of the app was to enforce core MVC concepts and explore managing multiple models with User accounts.
 
-* Ruby version
+**Technologies Used:**
+- Ruby and Rails
+- jQuery/AJAX
+- Bootstrap CSS and JS
+- PostgreSQL & ActiveRecord
+- Heroku (hosting)
 
-* System dependencies
+**What's next?:**
+- Improve mobile experience and UI/UX quality
+- Improve survey page
+- Add more Policies to the database
 
-* Configuration
+**Outstanding Issues:**
+- Mobile optimization is pretty poor, needs work.
+- Occassionaly the bootstrap modals will flash, then disappear when first opened. Need to investigate a fix. If you encounter this issue, simply refresh the page.
 
-* Database creation
+**Installation Instructions:**
+- To view the live site, visit: https://fourteeners-app.herokuapp.com/
+- To install locally, visit: https://github.com/gregbrunk/politicator and fork/clone the repo
+- Install Ruby v 2.2.5 or newer installed - https://www.ruby-lang.org/en/downloads/
+- Install postgresql - https://wiki.postgresql.org/wiki/Detailed_installation_guides
+- From a console in the root politicator directory, run 'bundle', follwed by 'rake db:setup'
+- Start the server using rails s
+- Navigate to 'http://localhost:3000/' from your browser
+- Enjoy!
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*This app was developed as Project #3 for my General Assembly Denver - WDI Immersive course.*
