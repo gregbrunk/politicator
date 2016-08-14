@@ -1,6 +1,7 @@
 .results-background {
 	display: flex;
 	background-color: #4A90E2;
+	padding-top: 10px;
 }
 
 .results-box {
@@ -39,6 +40,8 @@
 	background-color: #4A90E2;
 	padding: 50px 0 30px 0;
 	text-align: center;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
 }
 
 .results-page-header h1 {

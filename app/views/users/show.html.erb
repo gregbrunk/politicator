@@ -28,6 +28,9 @@
       <%= link_to 'Delete', delete_survey_path, method: :delete, :id => 'survey-edit-button' %>
     </div>
     <p>Your Compatability Results</p>
+    <div class="view-results-mobile">
+      <div class="result-button"><%= button_to 'View Details', results_path, method: :get, class: 'btn btn-outline-danger', :id => 'cta-button' %></div>
+    </div>
     <div class="col-md-2 offset-md-3 candidate-percent-box">
       <div class="candidate-percent">
         <div class="profile-img-candidate" style="background-image: url('/images/HillaryOverlay.png')">

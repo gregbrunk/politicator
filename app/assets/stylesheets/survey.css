@@ -3,8 +3,15 @@
 	color: white;
 }
 
-.survey-button	{
-	padding: 10px;
+.survey-page-header {
+	background-color: #4A90E2;
+	text-align: center;
+}
+
+.survey-page-header p {
+	color: white;
+	font-size: 40px;
+	font-family: 'Avenir Next LT Pro Ultra Light';
 }
 
 .form-container {
@@ -43,11 +50,11 @@
 }
 
 .left-survey-button {
-	margin-right: 11em;
+	margin-right: 10vw;
 }
 
 .right-survey-button {
-	margin-left: 11em;
+	margin-left: 10vw;
 }
 
 .survey-submit {
@@ -72,14 +79,3 @@
 .policy-hover {
 	color: white;
 }
-
-@media (max-width: 768px) {
-	.left-survey-button {
-		margin-right: 6em;
-	}
-
-	.right-survey-button {
-		margin-left: 6em;
-	}
-}
-
