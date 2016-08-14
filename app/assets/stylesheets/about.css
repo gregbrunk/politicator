@@ -58,7 +58,6 @@
 .about-div {
 	text-align: center;
 	margin-top: 25px;
-	margin-bottom: 20px;
 }
 
 .about-box {
@@ -113,20 +112,27 @@
 
 
 @media (max-width: 768px) {
+	.about-background {
+		display: inline-block;
+		height: auto;
+	}
+
 	.about-icon {
-		margin-top: 60px;
+		margin-top: 40px;
+		height: 100px;
 	}
 
 	.about-header-title {
-		margin-top: 50px;
-	}
-
-	.about-header-title {
+		margin-top: 30px;
 		text-align: center;
+		font-size: 30px;
 	}
 
 	.about-header-text {
 		text-align: center;
+		font-size: 16px;
+		line-height: 25px;
+		margin-bottom: 20px;
 	}
 
 	.about-background {
@@ -137,6 +143,14 @@
 		text-align: center;
 	}
 
+	.carrot-bottom-image {
+		margin-top: 5px;
+	}
+
+	.meet-developers-text {
+		font-size: 1em;
+	}
+
 	.about-box {
 		border-top: 1px solid lightgrey;
 		background: none;
@@ -144,7 +158,29 @@
 		height: 28vh;
 	}
 
+	.about-button {
+		margin-bottom: 30px;
+	}
+
+	.carrot-bottom {
+		display:none;
+	}
+
+	.meet-developers-text {
+		display: none;
+	}
+
 	.headshot {
 		margin: 0 auto 10px auto;
+	}
+
+	.about-box {
+		display: inline-block;
+		height: auto;
+		padding: 20px;
+	}
+
+	.about-box p {
+		font-size: 1.2em;
 	}
 }

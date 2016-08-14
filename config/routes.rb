@@ -6,9 +6,6 @@ Rails.application.routes.draw do
   # About Page Route
   get "/about", to: "welcome#about", as: "about"
 
-  #Resources Page Route
-  get "/resources", to: "welcome#resources", as: "resources"
-
   # User Routes
   resources :users
   get "/profile", to: "users#show", as: "profile"
