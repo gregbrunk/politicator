@@ -15,12 +15,11 @@ The goal of this project was to work in a 4 person team to build a full-stack ap
 - Heroku (hosting)
 
 **What's next?:**
-- Improve mobile experience and UI/UX quality
 - Improve survey page
 - Add more policies to the database
 
 **Outstanding Issues:**
-- Mobile optimization is pretty poor, needs work.
+- Mobile responisiveness could be better - also, not optimized for tablet.
 - Occassionaly the bootstrap modals will flash, then disappear when first opened. Need to investigate a fix. If you encounter this issue, simply refresh the page.
 
 **Installation Instructions:**
