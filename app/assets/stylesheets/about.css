@@ -7,7 +7,7 @@
 
 .about-header-title {
 	font-family:'Avenir Next LT Pro Regular';
-	margin-top: 200px;
+	margin-top: 170px;
 	color: white;
 	margin-bottom: 15px;
 	text-align: left;
@@ -29,7 +29,7 @@
 }
 
 .about-icon {
-	margin-top: 250px;
+	margin-top: 220px;
 	height: 25vh;
 
 }
@@ -62,15 +62,14 @@
 
 .about-box {
 	background-image: url("/images/about_box.png");
-	height: 35vh;
+	display: inline-block;
 	background-size: 100%;
 	background-repeat: no-repeat;
-	padding: 70px;
-	margin-top: 20px;
+	padding: 50px;
 }
 
 .about-box p {
-	font-size: 1.5em;
+	font-size: 1.6vw;
 }
 
 .our-team-title {
