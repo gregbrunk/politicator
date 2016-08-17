@@ -11,31 +11,14 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @choices = @user.choices
+    @policies = Policy.all
     
-    # Math for calculating compatibility with candidates
+    # Call for Math to calculate compatibility with candidates
     if @choices.empty? == false
-      @policies = Policy.all
-      @trump_counter = 0
-      @hillary_counter = 0
-      @hillary_compatible = 0
-      @trump_compatible = 0
-
-      @policies.each do |policy|
-        @hillary_choice = policy.hillary_choice
-        @trump_choice = policy.trump_choice
-        @user_choice = @choices.find_by policy_id: policy.id
-
-        if @hillary_choice == @user_choice.choice
-          @hillary_counter +=1
-        end
-
-        if @trump_choice == @user_choice.choice
-          @trump_counter +=1
-        end
-      end
-
-      @hillary_compatible = ((@hillary_counter.to_f / 12) * 100).floor
-      @trump_compatible = ((@trump_counter.to_f / 12) * 100).floor
+      @hillary_compatible = Policy.compatibility_check(@user)[0]
+      @trump_compatible = Policy.compatibility_check(@user)[1]
+      @hillary_counter = Policy.compatibility_check(@user)[2]
+      @trump_counter = Policy.compatibility_check(@user)[3]
     end
   end  
 
@@ -246,30 +229,12 @@ class UsersController < ApplicationController
     @user = current_user
     @choices = @user.choices
     
-    # Math for calculating compatibility with candidates
+    # Call for Math to calculate compatibility with candidates
     if @choices.empty? == false
-      @policies = Policy.all
-      @trump_counter = 0
-      @hillary_counter = 0
-      @hillary_compatible = 0
-      @trump_compatible = 0
-
-        @policies.each do |policy|
-          @hillary_choice = policy.hillary_choice
-          @trump_choice = policy.trump_choice
-          @user_choice = @choices.find_by policy_id: policy.id
-
-          if @hillary_choice == @user_choice.choice
-            @hillary_counter +=1
-          end
-
-          if @trump_choice == @user_choice.choice
-            @trump_counter +=1
-          end
-        end
-
-      @hillary_compatible = ((@hillary_counter.to_f / 12) * 100).floor
-      @trump_compatible = ((@trump_counter.to_f / 12) * 100).floor
+      @hillary_compatible = Policy.compatibility_check(@user)[0]
+      @trump_compatible = Policy.compatibility_check(@user)[1]
+      @hillary_counter = Policy.compatibility_check(@user)[2]
+      @trump_counter = Policy.compatibility_check(@user)[3]
     end
   end
 
