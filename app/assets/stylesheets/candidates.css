@@ -12,6 +12,7 @@
 	display: inline-block;
 	background-color: #4A90E2;
 	margin-bottom: -10px;
+	padding-top: 75px;
 }
 
 .candidates-page-header {
@@ -22,7 +23,7 @@
 
 .candidates-page-header p {
 	color: white;
-	font-size: 50px;
+	font-size: 2.5em;
 	padding-top: 60px;
 	font-family: 'Avenir Next LT Pro Ultra Light';
 }
@@ -71,8 +72,8 @@
 	}
 
 	.candidates-page-header p {
-		font-size: 5vh;
-		padding-top: 30px;
+		font-size: 1.4em;
+		padding-top: 50px;
 	}
 
 	.candidate-name-candidate-page {

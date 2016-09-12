@@ -67,6 +67,7 @@ html, body {
 
 .navbar-default, .navbar-nav>li>a, .navbar-brand {
 	color: #C05858 !important;
+	background-color: white;
 }
 
 .navbar-toggler{
@@ -113,7 +114,7 @@ html, body {
 .cta-header {
 	color: #C05858;
 	font-size: 30px;
-	padding-top: 80px;
+	padding-top: 40px;
 	font-family: 'Avenir Next LT Pro Ultra Light';
 }
 
@@ -210,9 +211,8 @@ html, body {
 .candidate-quote {
 	border: 1px lightgrey solid;
 	background-color: #EBEBEB;
-	padding: 15px 15px 5px 15px;
-	margin-top: 15px;
-	margin-bottom: 20px;
+	padding: 5px 15px 5px 15px;
+	margin-bottom: 10px;
 	text-align: center;
 	border-radius: 12px;
 	font-family: 'Avenir Next LT Pro Italic';
@@ -224,7 +224,7 @@ html, body {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	padding-bottom: 50px;
+	padding-bottom: 10px;
 }
 
 .candidate-button-box a {
@@ -233,10 +233,12 @@ html, body {
 
 /*Footer Section*/
 .footer {
-	height: 20vh;
+	display: inline-block;
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	background: linear-gradient(#252525, #282828);
 	text-align: center;
-	padding: 60px;
 }
 
 .footer-headline {
