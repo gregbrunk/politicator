@@ -7,7 +7,7 @@
 
 .about-header-title {
 	font-family:'Avenir Next LT Pro Regular';
-	margin-top: 170px;
+	margin-top: 120px;
 	color: white;
 	margin-bottom: 15px;
 	text-align: left;
@@ -16,9 +16,9 @@
 .about-header-text {
 	font-family: 'Avenir Next LT Pro Ultra Light';
 	color: white;
-	font-size: 20px;
-	line-height: 35px;
-	margin-bottom: 30px;
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 10px;
 	text-align: left;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .about-box p {
-	font-size: 1.6vw;
+	font-size: 18px;
 }
 
 .our-team-title {
@@ -79,8 +79,8 @@
 }
 
 .headshot {
-	height: 200px;
-	width: 200px;
+	height: 150px;
+	width: 150px;
 	background-size: cover;
 	background-position: 50% 50%;
 	border-radius: 50%;
@@ -93,8 +93,9 @@
 .headshot-section {
 	text-align: center;
 	font-family:'Avenir Next LT Pro Regular';
-	font-size: 20px;
+	font-size: 16px;
 	color: #373a3c;
+	margin-bottom: 30px;
 }
 
 .personal-icons {
