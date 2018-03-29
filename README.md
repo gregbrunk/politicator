@@ -1,5 +1,5 @@
 # politicator
-politicator is a prototype app that helps users undestand how their political leanings stack up against our presidential candidates. Think you know where you stand? See if you're right! Want to know more about what our candidates think about major current policies? This is the perfect app for you. See supporting quotes from the candidates themselves and take a quick survey to find out who you align with on major current issues. Visit the live app here: https://politicator-app.herokuapp.com/
+politicator is a prototype app that helps users undestand how their political leanings stack up against our presidential candidates. Think you know where you stand? See if you're right! Want to know more about what our candidates think about major current policies? This is the perfect app for you. See supporting quotes from the candidates themselves and take a quick survey to find out who you align with on major current issues. The app is no longer live :(
 
 **Original Designs:**
 ![Alt text](/public/images/homepage.jpg?raw=true "Home Page Design")
@@ -23,7 +23,6 @@ The goal of this project was to work in a 4 person team to build a full-stack ap
 - Occassionaly the bootstrap modals will flash, then disappear when first opened. Need to investigate a fix. If you encounter this issue, simply refresh the page.
 
 **Installation Instructions:**
-- To view the live site, visit: https://politicator-app.herokuapp.com/
 - To install locally, visit: https://github.com/gregbrunk/politicator and fork/clone the repo
 - Install Ruby v 2.2.5 or newer installed - https://www.ruby-lang.org/en/downloads/
 - Install postgresql - https://wiki.postgresql.org/wiki/Detailed_installation_guides
